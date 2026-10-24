@@ -1,0 +1,31 @@
+diff --git a/core/csr_regfile.sv b/core/csr_regfile.sv
+index f6ed1ecf5..83266d09e 100644
+--- a/core/csr_regfile.sv
++++ b/core/csr_regfile.sv
+@@ -1472,7 +1472,7 @@ module csr_regfile
+                 2'b00:   scbie_d = riscv::CBIE_ILLEGAL;
+                 2'b01:   scbie_d = riscv::CBIE_FLUSH;
+                 2'b11:   scbie_d = riscv::CBIE_INVAL;
+-                default: scbie_d = scbie_q;
++                default: scbie_d = riscv::CBIE_RSVD;
+               endcase
+               scbcfe_d = csr_wdata[6];
+             end
+@@ -1600,7 +1600,7 @@ module csr_regfile
+                 2'b00:   hcbie_d = riscv::CBIE_ILLEGAL;
+                 2'b01:   hcbie_d = riscv::CBIE_FLUSH;
+                 2'b11:   hcbie_d = riscv::CBIE_INVAL;
+-                default: hcbie_d = hcbie_q;
++                default: hcbie_d = riscv::CBIE_RSVD;
+               endcase
+               hcbcfe_d = csr_wdata[6];
+             end
+@@ -1793,7 +1793,7 @@ module csr_regfile
+               2'b00:   mcbie_d = riscv::CBIE_ILLEGAL;
+               2'b01:   mcbie_d = riscv::CBIE_FLUSH;
+               2'b11:   mcbie_d = riscv::CBIE_INVAL;
+-              default: mcbie_d = mcbie_q;
++              default: mcbie_d = riscv::CBIE_RSVD;
+             endcase
+             mcbcfe_d = csr_wdata[6];
+           end

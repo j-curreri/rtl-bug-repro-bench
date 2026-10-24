@@ -1,0 +1,29 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "nosim",
+  "run_id": "glm1",
+  "backend": "glm",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "GLM-5.3-Flash-FTW",
+  "num_turns": 61,
+  "cost_usd": 13.870028000000001,
+  "duration_s": 4045.143,
+  "leak_hits": [
+    "usr/bin | grep -i -E \\\"veril|riscv\\\" | head; ls /work/core/.github 2>/dev/null; ls -la /work/core | tail -20\", \"description\": "
+  ],
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/glm1/case-b00ddd-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": true
+  }
+}

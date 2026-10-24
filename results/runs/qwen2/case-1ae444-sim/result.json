@@ -1,0 +1,18 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "qwen2",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 15.334555999999997,
+  "duration_s": 1391.997,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "case": "cva6-d2fdf99a38",
+  "anon_id": "case-b1ec9b",
+  "condition": "nosim",
+  "run_id": "glm1",
+  "backend": "glm",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "GLM-5.3-Flash-FTW",
+  "num_turns": 61,
+  "cost_usd": 13.351436,
+  "duration_s": 4182.048,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

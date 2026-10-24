@@ -1,0 +1,30 @@
+{
+  "case": "cva6-d2fdf99a38",
+  "anon_id": "case-b1ec9b",
+  "condition": "sim",
+  "run_id": "qwen120-vague-s1",
+  "backend": "qwen",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "qwen38-27b",
+  "num_turns": 124,
+  "cost_usd": 48.67885600000001,
+  "duration_s": 5929.6,
+  "leak_hits": [
+    "la /work/core /work/sim /work/harness; find /work -name \\\"*.git*\\\" -o -name \\\"*.orig\\\" -o -name \\\"*.rej\\\" | head\", \"descrip",
+    "d\", \"description\": \"List core/sim/harness dirs and look for git metadata\"}"
+  ],
+  "grade": {
+    "case": "cva6-d2fdf99a38",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/qwen120-vague-s1/case-b1ec9b-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

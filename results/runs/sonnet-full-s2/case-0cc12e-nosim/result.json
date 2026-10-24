@@ -1,0 +1,27 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "nosim",
+  "run_id": "sonnet-full-s2",
+  "backend": "claude",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "claude-sonnet-5-5",
+  "num_turns": 8,
+  "cost_usd": 0.0657158,
+  "duration_s": 19.589,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/sonnet-full-s2/case-0cc12e-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

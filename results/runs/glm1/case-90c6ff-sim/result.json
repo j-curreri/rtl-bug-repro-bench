@@ -1,0 +1,26 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "glm1",
+  "backend": "glm",
+  "agent_status": "exit 1",
+  "model": "GLM-5.3-Flash-FTW",
+  "num_turns": 61,
+  "cost_usd": 15.920015999999997,
+  "duration_s": 6225.43,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-18b9875e9d",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/glm1/case-90c6ff-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": true
+  }
+}

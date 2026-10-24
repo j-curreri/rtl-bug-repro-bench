@@ -1,0 +1,30 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "qwen-turns120",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "qwen38-27b",
+  "num_turns": 100,
+  "cost_usd": 41.734544,
+  "duration_s": 6187.332,
+  "leak_hits": [
+    "{\"command\": \"ls -la /work; git -C /work log --oneline 2>&1 | head -5\", \"description\": \"Che",
+    "rk log --oneline 2>&1 | head -5\", \"description\": \"Check for git repo and hidden files\"}"
+  ],
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen-turns120/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 9
+    },
+    "valid": true
+  }
+}

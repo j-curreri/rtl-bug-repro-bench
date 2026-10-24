@@ -1,0 +1,19 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 27,
+  "cost_usd": 4.463760000000001,
+  "duration_s": 1411.5,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/home/bob/tools/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/bin/ld: /tmp/ccsiZINS.o: in function `test_main':\n(.text+0x4): undefined reference to `g_root'\n/home/bob/tools/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/../../../../riscv-none-elf/bin/ld: (.text+0x72): undefined reference to `a0'\ncollect2: error: ld returned 1 exit status\nmake: *** [/home/bob/Downloads/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

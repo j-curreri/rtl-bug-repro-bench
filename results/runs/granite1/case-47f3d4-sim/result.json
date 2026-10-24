@@ -1,0 +1,27 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 29,
+  "cost_usd": 7.9890039999999996,
+  "duration_s": 1589.298,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "granite-4.2-8b",
+  "num_turns": 22,
+  "cost_usd": 5.266944,
+  "duration_s": 1047.141,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-0cc12e-nosim/repro.S: Assembler messages:\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-0cc12e-nosim/repro.S:32: Error: unrecognized opcode `cmp t0,t1'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-0cc12e-nosim/repro.S:33: Error: illegal operands `beq zero,_fail'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

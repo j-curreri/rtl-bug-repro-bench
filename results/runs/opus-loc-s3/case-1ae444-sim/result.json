@@ -1,0 +1,27 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "opus-loc-s3",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "claude-opus-5-5",
+  "num_turns": 42,
+  "cost_usd": 3.5716133999999995,
+  "duration_s": 794.907,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/opus-loc-s3/case-1ae444-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

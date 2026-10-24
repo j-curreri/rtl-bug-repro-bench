@@ -1,0 +1,27 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "opus-loc-s1",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "claude-opus-5-5",
+  "num_turns": 42,
+  "cost_usd": 2.5257222,
+  "duration_s": 618.497,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-18b9875e9d",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/opus-loc-s1/case-90c6ff-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 4
+    },
+    "valid": true
+  }
+}

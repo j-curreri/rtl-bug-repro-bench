@@ -1,0 +1,29 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 42,
+  "cost_usd": 7.685784,
+  "duration_s": 1305.574,
+  "leak_hits": [
+    "name \\\"*run*\\\" -o -name \\\"*test*\\\" 2>/dev/null | grep -v \\\".git\\\" | grep -v \\\".pyc\\\" | head -40\", \"description\": \"Find sim/"
+  ],
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-1ae444-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "valid": false
+  }
+}

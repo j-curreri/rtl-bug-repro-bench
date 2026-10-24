@@ -1,0 +1,19 @@
+{
+  "case": "cva6-2d2d0c11b7",
+  "anon_id": "case-2696e8",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 29,
+  "cost_usd": 5.0617399999999995,
+  "duration_s": 2000.376,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:103: Error: a bignum with underscores may not have more than 8 hex digits in any word\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:103: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:103: Error: a bignum with underscores may not have more than 8 hex digits in any word\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:103: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:103: Error: a bignum with underscores may not have more than 8 hex digits in any word\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:103: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:104: Error: illegal operands `li t1,PTE_V|PTE_X'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:105: Error: unrecognized opcode `giga_leaf(g_root, 0,t0,t1)'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:109: Error: a bignum with underscores may not have more than 8 hex digits in any word\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:109: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:109: Error: offset too large\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:116: Error: unrecognized opcode `hlx t3,t1,t2'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:122: Error: unrecognized opcode `hlv t3,t1,t2'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-2696e8-nosim/repro.S:124: Error: unrecognized opcode `pass'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "nosim",
+  "run_id": "opus-full-s3",
+  "backend": "claude",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "claude-opus-5-5",
+  "num_turns": 10,
+  "cost_usd": 0.20288399999999998,
+  "duration_s": 44.605,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/opus-full-s3/case-b00ddd-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": true
+  }
+}

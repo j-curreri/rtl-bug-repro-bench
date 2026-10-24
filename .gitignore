@@ -1,0 +1,6 @@
+__pycache__/
+*.elf
+builds/
+cores/
+eval/runs/
+eval/docker/claude

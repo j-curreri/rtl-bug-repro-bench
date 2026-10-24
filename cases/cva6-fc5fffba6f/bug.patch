@@ -1,0 +1,15 @@
+diff --git a/core/csr_regfile.sv b/core/csr_regfile.sv
+index f6ed1ecf5..e90980205 100644
+--- a/core/csr_regfile.sv
++++ b/core/csr_regfile.sv
+@@ -2412,8 +2412,8 @@ module csr_regfile
+       mstatus_d.mpie = 1'b1;
+       if (mstatus_q.mpp != riscv::PRIV_LVL_M) mstatus_d.mprv = 1'b0;
+       if (CVA6Cfg.RVH) begin
+-        // MPV is ignored when returning to M-mode.
+-        v_d = (mstatus_q.mpp == riscv::PRIV_LVL_M) ? 1'b0 : mstatus_q.mpv;
++        // set virtualization mode
++        v_d = mstatus_q.mpv;
+         //set mstatus mpv to false
+         mstatus_d.mpv = 1'b0;
+       end

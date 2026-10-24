@@ -1,0 +1,21 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "qwen120-loc-s1",
+  "backend": "qwen",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 121,
+  "cost_usd": 68.444036,
+  "duration_s": 11651.007,
+  "leak_hits": [
+    "{\"command\": \"ls -la /work; ls /work/.git 2>/dev/null | head -3; grep -n \\\"SMODE_STATUS\\\\|HSTATUS_WRI",
+    "re/include/ariane_pkg.sv | head\", \"description\": \"Check for git dir and ariane_pkg masks\"}"
+  ],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

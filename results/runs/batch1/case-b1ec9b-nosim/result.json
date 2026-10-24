@@ -1,0 +1,26 @@
+{
+  "case": "cva6-d2fdf99a38",
+  "anon_id": "case-b1ec9b",
+  "condition": "nosim",
+  "run_id": "batch1",
+  "backend": "claude",
+  "agent_status": "exited",
+  "model": "claude-sonnet-5-5",
+  "num_turns": 17,
+  "cost_usd": 0.19135579999999994,
+  "duration_s": 61.327,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-d2fdf99a38",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/batch1/case-b1ec9b-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "qwen120-vague-s1",
+  "backend": "qwen",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 121,
+  "cost_usd": 57.979791999999996,
+  "duration_s": 12117.835,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

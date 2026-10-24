@@ -1,0 +1,21 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "nosim",
+  "run_id": "qwen-full-s3",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 15.602388,
+  "duration_s": 1041.104,
+  "leak_hits": [
+    "{\"command\": \"find /work -name \\\".git*\\\" -maxdepth 3 2>/dev/null; ls -la /work/core; grep -rn \\\"T",
+    "k/core/csr_regfile.sv | head -20\", \"description\": \"Look for git metadata and TODO markers\"}"
+  ],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

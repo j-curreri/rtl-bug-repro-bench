@@ -1,0 +1,29 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "nosim",
+  "run_id": "qwen-turns120",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "qwen38-27b",
+  "num_turns": 31,
+  "cost_usd": 5.161351999999998,
+  "duration_s": 971.427,
+  "leak_hits": [
+    "{\"command\": \"find /work -type f -not -path '*/\\\\.git/*' | sort\", \"description\": \"List all files in /work\"}"
+  ],
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/qwen-turns120/case-47f3d4-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

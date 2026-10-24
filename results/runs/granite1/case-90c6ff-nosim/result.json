@@ -1,0 +1,18 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "granite-4.2-8b",
+  "num_turns": 35,
+  "cost_usd": 7.90478,
+  "duration_s": 3898.371,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

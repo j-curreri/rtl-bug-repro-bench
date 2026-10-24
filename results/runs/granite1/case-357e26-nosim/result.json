@@ -1,0 +1,29 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "granite-4.2-8b",
+  "num_turns": 61,
+  "cost_usd": 12.593332000000002,
+  "duration_s": 3803.454,
+  "leak_hits": [
+    " -name \\\"*.py\\\" -o -name \\\"*.hpp\\\" 2>/dev/null | grep -v \\\".git\\\" | head -20\", \"description\": \"Find header files in work di"
+  ],
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-357e26-nosim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "valid": false
+  }
+}

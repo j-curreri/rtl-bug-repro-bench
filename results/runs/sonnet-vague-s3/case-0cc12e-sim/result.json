@@ -1,0 +1,27 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "sonnet-vague-s3",
+  "backend": "claude",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "claude-sonnet-5-5",
+  "num_turns": 61,
+  "cost_usd": 1.0127591999999999,
+  "duration_s": 1113.608,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/sonnet-vague-s3/case-0cc12e-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2825
+    },
+    "buggy": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "valid": false
+  }
+}

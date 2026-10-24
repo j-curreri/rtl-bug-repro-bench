@@ -1,0 +1,27 @@
+{
+  "case": "cva6-2d2d0c11b7",
+  "anon_id": "case-2696e8",
+  "condition": "nosim",
+  "run_id": "qwen-full-s2",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 28.205767999999996,
+  "duration_s": 4412.75,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-2d2d0c11b7",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen-full-s2/case-2696e8-nosim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 24,
+  "cost_usd": 4.578900000000001,
+  "duration_s": 1544.651,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-90c6ff-sim/repro.S: Assembler messages:\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-90c6ff-sim/repro.S:19: Error: unrecognized opcode `enter_vs test_vs_main'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

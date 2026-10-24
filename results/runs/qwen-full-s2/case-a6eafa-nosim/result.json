@@ -1,0 +1,19 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "nosim",
+  "run_id": "qwen-full-s2",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 27.892044,
+  "duration_s": 3900.098,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen-full-s2/case-a6eafa-nosim/repro.S: Assembler messages:\n/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen-full-s2/case-a6eafa-nosim/repro.S:144: Error: unrecognized opcode `hlvx a1,0(t2)'\nmake: *** [/home/bob/Downloads/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

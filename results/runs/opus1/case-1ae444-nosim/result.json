@@ -1,0 +1,26 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "nosim",
+  "run_id": "opus1",
+  "backend": "claude",
+  "agent_status": "exited",
+  "model": "claude-opus-5-5",
+  "num_turns": 14,
+  "cost_usd": 0.41108220000000006,
+  "duration_s": 83.292,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/opus1/case-1ae444-nosim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

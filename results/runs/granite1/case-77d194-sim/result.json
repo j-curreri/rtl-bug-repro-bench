@@ -1,0 +1,29 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "granite-4.2-8b",
+  "num_turns": 61,
+  "cost_usd": 11.339124000000005,
+  "duration_s": 3373.419,
+  "leak_hits": [
+    ": \"find /work -name \\\"*.h\\\" -o -name \\\"*.hpp\\\" | grep -v \\\".git\\\" | head -30\", \"description\": \"Find all header files\"}"
+  ],
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "case": "cva6-49b5fa9e2f",
+  "anon_id": "case-cb7e9d",
+  "condition": "sim",
+  "run_id": "qwen120-vague-s1",
+  "backend": "qwen",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "qwen38-27b",
+  "num_turns": 44,
+  "cost_usd": 15.247347999999997,
+  "duration_s": 4670.806,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-49b5fa9e2f",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/qwen120-vague-s1/case-cb7e9d-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 5
+    },
+    "valid": true
+  }
+}

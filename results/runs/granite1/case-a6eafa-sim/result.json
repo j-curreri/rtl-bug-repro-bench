@@ -1,0 +1,19 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "sim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 28,
+  "cost_usd": 6.262992,
+  "duration_s": 1266.313,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "f line, first unrecognized character is `\\'\n/mnt/k3/rtl-bug-repro-bench/harness/cva6//hyp.h:59: Error: junk at end of line, first unrecognized character is `\\'\n/mnt/k3/rtl-bug-repro-bench/harness/cva6//hyp.h:60: Error: junk at end of line, first unrecognized character is `\\'\n/mnt/k3/rtl-bug-repro-bench/harness/cva6//hyp.h:61: Error: junk at end of line, first unrecognized character is `\\'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:20: Error: unrecognized opcode `hgatp_on'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:22: Error: illegal operands `li t1,SATP_SV39'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:31: Error: unrecognized opcode `raw_pte(vs_root, t2,(PTE_V|PTE_X))'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:37: Error: illegal operands `li t3,(PTE_V|PTE_R|PTE_X)'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:38: Error: unrecognized opcode `raw_pte(vs_root, t2,(PTE_V|PTE_R|PTE_X))'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:44: Error: illegal operands `li t3,(PTE_V|PTE_X)'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:45: Error: unrecognized opcode `raw_pte(g_root, t2,(PTE_V|PTE_X))'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:49: Error: illegal operands `li t3,(PTE_V|PTE_R|PTE_W)'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:50: Error: unrecognized opcode `raw_pte(g_root, t2,(PTE_V|PTE_R|PTE_W))'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:57: Error: illegal operands `li t0,g_root'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:71: Error: unrecognized opcode `enter_vs(test_load)'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-a6eafa-sim/repro.S:77: Error: unrecognized opcode `pass'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

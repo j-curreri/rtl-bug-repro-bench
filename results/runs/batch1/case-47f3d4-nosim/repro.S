@@ -1,0 +1,10 @@
+#include "test.h"
+.globl test_main
+test_main:
+  csrr t0, mstatus
+  srli t0, t0, 34
+  andi t0, t0, 3
+  bnez t0, 1f
+  PASS
+1:
+  FAIL(1)

@@ -1,0 +1,30 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "qwen2",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 27.71012,
+  "duration_s": 8526.824,
+  "leak_hits": [
+    "{\"command\": \"ls -la /work; find /work -name \\\".git\\\" -maxdepth 3 2>/dev/null; find / -maxdepth 2 -name \\\"*.md\\",
+    "/dev/null | grep -v proc | head\", \"description\": \"Check for git metadata and recent files\"}"
+  ],
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen2/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

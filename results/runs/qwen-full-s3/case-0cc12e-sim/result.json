@@ -1,0 +1,19 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "qwen-full-s3",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 15.984204,
+  "duration_s": 2004.175,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen-full-s3/case-0cc12e-sim/repro.S: Assembler messages:\n/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen-full-s3/case-0cc12e-sim/repro.S:99: Error: unrecognized opcode `sl a1,a1,t4'\nmake: *** [/home/bob/Downloads/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

@@ -1,0 +1,29 @@
+diff --git a/core/csr_regfile.sv b/core/csr_regfile.sv
+index f6ed1ecf5..1d383c2c4 100644
+--- a/core/csr_regfile.sv
++++ b/core/csr_regfile.sv
+@@ -2036,10 +2036,8 @@ module csr_regfile
+       endcase
+     end
+     if (CVA6Cfg.IS_XLEN64) begin
+-      if (CVA6Cfg.RVS) mstatus_d.sxl = riscv::XLEN_64;
+-      else mstatus_d.sxl = riscv::XLEN_NA;
+-      if (CVA6Cfg.RVU) mstatus_d.uxl = riscv::XLEN_64;
+-      else mstatus_d.uxl = riscv::XLEN_NA;
++      mstatus_d.sxl = riscv::XLEN_64;
++      mstatus_d.uxl = riscv::XLEN_64;
+     end
+     if (!CVA6Cfg.RVU) begin
+       mstatus_d.mpp = riscv::PRIV_LVL_M;
+diff --git a/core/include/riscv_pkg.sv b/core/include/riscv_pkg.sv
+index 146bcc2c3..7c1a7bbf2 100644
+--- a/core/include/riscv_pkg.sv
++++ b/core/include/riscv_pkg.sv
+@@ -37,7 +37,6 @@ package riscv;
+ 
+   // type which holds xlen
+   typedef enum logic [1:0] {
+-    XLEN_NA  = 2'b00,  // Used for mstatus.{S/U}XL when {S/U} not implemented
+     XLEN_32  = 2'b01,
+     XLEN_64  = 2'b10,
+     XLEN_128 = 2'b11

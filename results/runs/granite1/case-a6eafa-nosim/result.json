@@ -1,0 +1,20 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "granite-4.2-8b",
+  "num_turns": 22,
+  "cost_usd": 5.363192,
+  "duration_s": 2388.63,
+  "leak_hits": [
+    "d /work -type f -name \\\"*.c\\\" -o -name \\\"*.h\\\" | grep -v \\\".git\\\"\", \"description\": \"Find all C/H files\"}"
+  ],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "case": "cva6-99a0807757",
+  "anon_id": "case-36b209",
+  "condition": "sim",
+  "run_id": "qwen2",
+  "backend": "qwen",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "qwen38-27b",
+  "num_turns": 61,
+  "cost_usd": 31.94394,
+  "duration_s": 6096.703,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen2/case-36b209-sim/repro.S: Assembler messages:\n/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/qwen2/case-36b209-sim/repro.S:47: Error: illegal operands `li a0,t1'\nmake: *** [/home/bob/Downloads/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

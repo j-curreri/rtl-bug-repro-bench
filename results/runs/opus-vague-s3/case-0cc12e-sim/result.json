@@ -1,0 +1,18 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "opus-vague-s3",
+  "backend": "claude",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "claude-opus-5-5",
+  "num_turns": 61,
+  "cost_usd": 2.4481077999999994,
+  "duration_s": 685.054,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

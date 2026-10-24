@@ -1,0 +1,19 @@
+{
+  "case": "cva6-d2fdf99a38",
+  "anon_id": "case-b1ec9b",
+  "condition": "sim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 20,
+  "cost_usd": 3.671812,
+  "duration_s": 980.023,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S: Assembler messages:\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:18: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:18: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:18: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:18: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:22: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:22: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:22: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:22: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:24: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:24: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:24: Error: a bignum with underscores must have exactly 4 words\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-b1ec9b-sim/repro.S:24: Error: a bignum with underscores must have exactly 4 words\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

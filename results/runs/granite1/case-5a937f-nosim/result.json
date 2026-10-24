@@ -1,0 +1,21 @@
+{
+  "case": "cva6-cc81a7bb49",
+  "anon_id": "case-5a937f",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "granite-4.2-8b",
+  "num_turns": 46,
+  "cost_usd": 8.368724,
+  "duration_s": 2031.744,
+  "leak_hits": [
+    "mmand\": \"find /work -name \\\"*config*\\\" -type f | grep -v \\\".git\\\" | head -20\"}"
+  ],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-5a937f-nosim/repro.S: Assembler messages:\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-5a937f-nosim/repro.S:33: Error: unrecognized opcode `_pass'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-5a937f-nosim/repro.S:37: Error: unrecognized opcode `_fail'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

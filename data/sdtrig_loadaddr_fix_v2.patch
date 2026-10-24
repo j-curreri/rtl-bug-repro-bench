@@ -1,0 +1,192 @@
+diff -ru a/core/csr_regfile.sv b/core/csr_regfile.sv
+--- a/core/csr_regfile.sv	2026-10-18 01:43:09.918273337 -0500
++++ b/core/csr_regfile.sv	2026-10-18 01:43:09.959318188 -0500
+@@ -204,6 +204,7 @@
+     //LSU <-> trigger module commmunication
+     output logic sdtrig_load_stall_o,
+     output logic sdtrig_load_cancel_o,
++    output logic [1:0] sdtrig_load_addr_hit_o,
+     output logic [CVA6Cfg.XLEN-1:0] sdtrig_load_action_o,
+     output logic sdtrig_store_stall_o,
+     output logic [CVA6Cfg.XLEN-1:0] sdtrig_store_action_o,
+@@ -3121,6 +3122,7 @@
+           .sdtrig_decoder_action_o            (sdtrig_decoder_action_o),
+           .sdtrig_load_stall_o                (sdtrig_load_stall_o),
+           .sdtrig_load_cancel_o               (sdtrig_load_cancel_o),
++          .sdtrig_load_addr_hit_o             (sdtrig_load_addr_hit_o),
+           .sdtrig_load_action_o               (sdtrig_load_action_o),
+           .sdtrig_store_stall_o               (sdtrig_store_stall_o),
+           .sdtrig_store_action_o              (sdtrig_store_action_o),
+@@ -3142,6 +3144,7 @@
+       for (genvar i = 0; i < CVA6Cfg.NrIssuePorts; i++) assign sdtrig_decoder_action_o[i] = '0;
+       assign sdtrig_load_stall_o = '0;
+       assign sdtrig_load_cancel_o = '0;
++      assign sdtrig_load_addr_hit_o = '0;
+       assign sdtrig_load_action_o = '0;
+       assign sdtrig_store_stall_o = '0;
+       assign sdtrig_store_action_o = '0;
+diff -ru a/core/cva6.sv b/core/cva6.sv
+--- a/core/cva6.sv	2026-10-18 01:43:09.912460277 -0500
++++ b/core/cva6.sv	2026-10-18 01:43:09.959555563 -0500
+@@ -169,6 +169,7 @@
+       logic [CVA6Cfg.TRANS_ID_BITS-1:0] trans_id;
+       logic                             is_speculative_load;
+       logic                             is_speculative_load_miss;
++      logic [1:0]                       sdtrig_load_addr_hit;  // see trigger_module
+     },
+ 
+ 
+@@ -618,6 +619,7 @@
+       sdtrig_load_cancel,
+       sdtrig_store_stall;
+   logic [CVA6Cfg.XLEN-1:0] sdtrig_decoder_action[CVA6Cfg.NrIssuePorts];
++  logic [1:0] sdtrig_load_addr_hit;
+   logic [CVA6Cfg.XLEN-1:0] sdtrig_load_action, sdtrig_store_action, sdtrig_commit_action;
+   logic [CVA6Cfg.VLEN-1:0] sdtrig_lsu_inputs_operand_a;
+   logic [CVA6Cfg.XLEN-1:0] sdtrig_lsu_inputs_operand_c;
+@@ -1134,6 +1136,7 @@
+       //Trigger module command signals
+       .sdtrig_load_stall_i          (sdtrig_load_stall),
+       .sdtrig_load_cancel_i         (sdtrig_load_cancel),
++      .sdtrig_load_addr_hit_i       (sdtrig_load_addr_hit),
+       .sdtrig_load_action_i         (sdtrig_load_action),
+       .sdtrig_store_stall_i         (sdtrig_store_stall),
+       .sdtrig_store_action_i        (sdtrig_store_action),
+@@ -1323,6 +1326,7 @@
+       .sdtrig_load_valid_i                (load_valid_ex_id),
+       .sdtrig_load_stall_o                (sdtrig_load_stall),
+       .sdtrig_load_cancel_o               (sdtrig_load_cancel),
++      .sdtrig_load_addr_hit_o             (sdtrig_load_addr_hit),
+       .sdtrig_load_action_o               (sdtrig_load_action),
+       .sdtrig_store_stall_o               (sdtrig_store_stall),
+       .sdtrig_store_action_o              (sdtrig_store_action),
+diff -ru a/core/ex_stage.sv b/core/ex_stage.sv
+--- a/core/ex_stage.sv	2026-10-18 01:43:09.922075359 -0500
++++ b/core/ex_stage.sv	2026-10-18 01:43:09.959649369 -0500
+@@ -256,6 +256,7 @@
+     output logic sdtrig_lsu_inputs_valid_o,
+     input logic sdtrig_load_stall_i,
+     input logic sdtrig_load_cancel_i,
++    input logic [1:0] sdtrig_load_addr_hit_i,
+     input logic [CVA6Cfg.XLEN-1:0] sdtrig_load_action_i,
+     input logic sdtrig_store_stall_i,
+     input logic [CVA6Cfg.XLEN-1:0] sdtrig_store_action_i
+@@ -629,6 +630,7 @@
+       //Trigger module command signals
+       .sdtrig_load_stall_i    (sdtrig_load_stall_i),
+       .sdtrig_load_cancel_i   (sdtrig_load_cancel_i),
++      .sdtrig_load_addr_hit_i (sdtrig_load_addr_hit_i),
+       .sdtrig_load_action_i   (sdtrig_load_action_i),
+       .sdtrig_store_stall_i   (sdtrig_store_stall_i),
+       .sdtrig_store_action_i  (sdtrig_store_action_i)
+diff -ru a/core/load_store_unit.sv b/core/load_store_unit.sv
+--- a/core/load_store_unit.sv	2026-10-18 01:43:09.927058723 -0500
++++ b/core/load_store_unit.sv	2026-10-18 01:43:09.959726045 -0500
+@@ -174,6 +174,7 @@
+     //Trigger module communication
+     input  logic                         sdtrig_load_stall_i,
+     input  logic                         sdtrig_load_cancel_i,
++    input  logic      [               1:0] sdtrig_load_addr_hit_i,
+     input  logic      [CVA6Cfg.XLEN-1:0] sdtrig_load_action_i,
+     input  logic                         sdtrig_store_stall_i,
+     input  logic      [CVA6Cfg.XLEN-1:0] sdtrig_store_action_i
+@@ -896,7 +897,8 @@
+     fu_data_i.operation,
+     fu_data_i.trans_id,
+     speculative_load_i,
+-    1'b0
++    1'b0,
++    (fu_data_i.fu == LOAD) ? sdtrig_load_addr_hit_i : 2'b00
+   };
+ 
+   lsu_bypass #(
+diff -ru a/core/load_unit.sv b/core/load_unit.sv
+--- a/core/load_unit.sv	2026-10-18 01:43:09.931384289 -0500
++++ b/core/load_unit.sv	2026-10-18 01:43:09.959802423 -0500
+@@ -236,6 +236,12 @@
+   assign inflight_stores = (!dcache_wbuffer_not_ni_i || !store_buffer_empty_i);
+   assign stall_ni = (inflight_stores || not_commit_time) && (paddr_ni && CVA6Cfg.NonIdemPotenceEn) || sdtrig_load_stall_i;
+ 
++  // A load tagged by a load-address trigger never reaches memory: it is retired with the
++  // trigger's exception (rvalid_output) and popped, once no response competes for valid_o.
++  logic sdtrig_la_tagged, sdtrig_la_trap;
++  assign sdtrig_la_tagged = CVA6Cfg.SdtrigMcontrol6LoadAddr && (lsu_ctrl_i.sdtrig_load_addr_hit != 2'b00);
++  assign sdtrig_la_trap = valid_i && sdtrig_la_tagged && (state_q == IDLE) && !req_port_i.data_rvalid && !flush_i;
++
+   // ---------------
+   // Load Control
+   // ---------------
+@@ -256,7 +262,7 @@
+     // In IDLE and SEND_TAG states, this unit can accept a new load request
+     // when the load buffer is not full or if there is a response and the
+     // load buffer is in fall-through mode
+-    accept_req           = (valid_i && (!ldbuf_full || (LDBUF_FALLTHROUGH && ldbuf_r)));
++    accept_req           = (valid_i && !sdtrig_la_tagged && (!ldbuf_full || (LDBUF_FALLTHROUGH && ldbuf_r)));
+     if (sdtrig_load_cancel_i) begin
+       //cancel any possible memory access
+       req_port_o.data_req = 1'b0;
+@@ -457,6 +463,8 @@
+         end
+       endcase
+ 
++      if (sdtrig_la_trap) pop_ld_o = 1'b1;
++
+       // if we just flushed and the queue is not empty or we are getting an rvalid this cycle wait in an extra stage
+       if (flush_i) begin
+         state_d = WAIT_FLUSH;
+@@ -523,6 +531,18 @@
+       ex_o.valid = 1'b1;
+     end
+ 
++    if (sdtrig_la_trap) begin
++      trans_id_o = lsu_ctrl_i.trans_id;
++      valid_o    = 1'b1;
++      ex_o.valid = 1'b1;
++      ex_o.cause = (lsu_ctrl_i.sdtrig_load_addr_hit == 2'd2) ? riscv::DEBUG_REQUEST : riscv::BREAKPOINT;
++      ex_o.tval  = CVA6Cfg.TvalEn ? lsu_ctrl_i.vaddr : '0;
++      ex_o.tval2 = '0;
++      ex_o.tinst = '0;
++      ex_o.gva   = 1'b0;
++      ex_o.timing = 1'b0;
++    end
++
+     // raise valid when removing a misspredicted speculative load
+     if (CVA6Cfg.SpeculativeSb && (state_q == WAIT_SPEC_LOAD) && lsu_ctrl_i.is_speculative_load_miss && !req_port_i.data_rvalid && valid_i) begin
+       trans_id_o = lsu_ctrl_i.trans_id;
+diff -ru a/core/trigger_module.sv b/core/trigger_module.sv
+--- a/core/trigger_module.sv	2026-10-18 01:43:09.935571455 -0500
++++ b/core/trigger_module.sv	2026-10-18 01:43:09.958964874 -0500
+@@ -64,6 +64,8 @@
+ 
+     output logic sdtrig_load_stall_o,
+     output logic sdtrig_load_cancel_o,
++    // Load-address trigger hit for the load entering the LSU this cycle: 1 breakpoint, 2 debug request
++    output logic [1:0] sdtrig_load_addr_hit_o,
+     output logic [CVA6Cfg.XLEN-1:0] sdtrig_load_action_o,
+     output logic sdtrig_store_stall_o,
+     output logic [CVA6Cfg.XLEN-1:0] sdtrig_store_action_o,
+@@ -228,6 +230,7 @@
+     matchLA = 1'b0;
+     matchLD = 1'b0;
+     sdtrig_load_cancel_d = 1'b0;
++    sdtrig_load_addr_hit_o = 2'b00;
+     sdtrig_load_stall_o = (ex_i.valid) ? 1'b0 : sdtrig_load_stall_s;
+     sdtrig_store_stall_o = 1'b0;
+     sdtrig_commit_icount_valid_d = 1'b0;
+@@ -767,9 +770,13 @@
+       
+       if (CVA6Cfg.SdtrigMcontrol6LoadAddr && fire_req_LA.valid || CVA6Cfg.SdtrigMcontrol6Store && fire_req_SX.valid) begin
+         if (CVA6Cfg.SdtrigMcontrol6LoadAddr && fire_req_LA.valid) begin
+-          sdtrig_load_cancel_d = (sdtrig_load_cancel_q) ? 1'b0 : 1'b1;
+-          if (!sdtrig_load_cancel_q) sdtrig_load_action_d = fire_req_LA.action;
+-          sdtrig_load_action_o = sdtrig_load_cancel_q ? sdtrig_load_action_q : fire_req_LA.action;
++          // The match is computed on the load entering the LSU. Tag that load so the load unit
++          // retires exactly it with the trigger's exception. A registered cancel instead lands a
++          // cycle later on whichever load the load unit holds then: possibly an older queued load,
++          // or none if the matching load was already popped (its scoreboard entry then never
++          // completes and the core hangs).
++          if (fire_req_LA.action == riscv::BREAKPOINT) sdtrig_load_addr_hit_o = 2'd1;
++          else if (fire_req_LA.action == riscv::DEBUG_REQUEST) sdtrig_load_addr_hit_o = 2'd2;
+         end
+         if (CVA6Cfg.SdtrigMcontrol6Store && fire_req_SX.valid) begin
+           sdtrig_store_action_o = fire_req_SX.action;

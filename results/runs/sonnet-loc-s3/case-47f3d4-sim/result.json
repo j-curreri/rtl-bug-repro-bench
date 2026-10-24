@@ -1,0 +1,27 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "sonnet-loc-s3",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "claude-sonnet-5-5",
+  "num_turns": 61,
+  "cost_usd": 1.4858641999999995,
+  "duration_s": 1080.289,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/sonnet-loc-s3/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 256
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 256
+    },
+    "valid": false
+  }
+}

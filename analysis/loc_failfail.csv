@@ -1,0 +1,41 @@
+case,run,fail_code,spike_exit,mechanism,category,deviation,note
+cva6-0e04a86b13,sonnet-loc-s1,261,5,wrong,broken test,,Uses ENTER_VS and HFENCE on a config without H (TASK.md names it); in HS-mode HFENCE.VVMA traps illegal. Hit the 60-turn cap.
+cva6-18b9875e9d,opus-loc-s3,2,0,wrong,real deviation,D4,HLVX after HLV fills the DTLB through an R-only G-stage page.
+cva6-18b9875e9d,sonnet-loc-s1,2,0,wrong,real deviation,D4,Same HLVX DTLB-hit check as opus-loc-s3.
+cva6-18b9875e9d,sonnet-loc-s3,2,0,wrong,real deviation,D8,"PMP-denied page-table read for a store; expects cause 7, core gives 5. Never ran the sim."
+cva6-194d39face,opus-loc-s1,1,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-194d39face,opus-loc-s3,1,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-194d39face,sonnet-loc-s3,1,0,wrong,spec misread,,Expects medeleg[9] to be writable; delegation bits are WARL and may be hardwired. Never ran the sim.
+cva6-2d2d0c11b7,sonnet-loc-s1,1,0,right,real deviation,D5,"Targets the injected HLVX->HLV bug, but issues HLV back to back with HLVX; the fixed core still fails then. With 4 nops between them the same test scores (fixed pass, buggy fail)."
+cva6-6fe7b95910,opus-loc-s1,1,0,wrong,spec misread,,"Expects an NA4 entry to match; with G=1 NA4 is not selectable, so no fault is required. CVA6 does keep the illegal NA4 encoding (minor WARL issue)."
+cva6-6fe7b95910,opus-loc-s3,3,0,wrong,spec misread,,"NA4 at G=1, as opus-loc-s1."
+cva6-6fe7b95910,sonnet-loc-s1,1,0,wrong,spec misread,,NA4 at G=1.
+cva6-6fe7b95910,sonnet-loc-s2,1,0,wrong,spec misread,,NA4 at G=1.
+cva6-6fe7b95910,sonnet-loc-s3,1,hang,wrong,spec misread,,NA4 at G=1.
+cva6-81245a47fa,opus-loc-s1,2,0,wrong,real deviation,D6,(withheld pending a security advisory)
+cva6-81245a47fa,opus-loc-s2,1,0,wrong,real deviation,D2,U-mode rdcycle with scounteren=0 does not trap.
+cva6-81245a47fa,sonnet-loc-s1,8,0,wrong,real deviation,D2,Counter gating.
+cva6-81245a47fa,sonnet-loc-s2,1,0,wrong,real deviation,D2,Counter gating. Never ran the sim.
+cva6-81245a47fa,sonnet-loc-s3,1,0,wrong,real deviation,D2,Counter gating. Never ran the sim.
+cva6-99a0807757,opus-loc-s2,3,0,wrong,real deviation,D3,G-stage U=0 alias of the VS root.
+cva6-9a0e01e383,opus-loc-s1,1,0,wrong,real deviation,D3,G-stage U=0 alias of a VS table. Also found the injected HLVX bug and set it aside as an upstream quirk.
+cva6-9a0e01e383,opus-loc-s2,3,0,wrong,real deviation,D3,G-stage U=0. Also found the injected HLVX bug and set it aside as an upstream quirk.
+cva6-9a0e01e383,opus-loc-s3,1,0,wrong,real deviation,D3,G-stage U=0 via MPRV+MPV.
+cva6-aef009c4b3,opus-loc-s1,4,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-aef009c4b3,sonnet-loc-s1,106,0,wrong,broken test,,Clears CLINT msip in the handler and returns at once; the interrupt is taken a third time before the clear lands (timing is implementation-defined). Hit the turn cap.
+cva6-aef009c4b3,sonnet-loc-s2,127,127,wrong,broken test,,"Reads mideleg on an M/U-only config (no S, no H): illegal instruction. Never ran the sim."
+cva6-aef009c4b3,sonnet-loc-s3,2,2,wrong,broken test,,Writes scounteren on an M/U-only config: illegal instruction. Hit the turn cap.
+cva6-cc81a7bb49,opus-loc-s1,1,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-cc81a7bb49,opus-loc-s2,1,1,wrong,broken test,D7,"Clobbers t0 before csrs mip, so SSIP is never raised. With that one line repaired, the fixed core fails and Spike passes. Hit the turn cap."
+cva6-cc81a7bb49,opus-loc-s3,2,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-cc81a7bb49,sonnet-loc-s1,1,0,wrong,spec misread,,"Expects medeleg[9] to be writable (and assumes H, which this config lacks)."
+cva6-cc81a7bb49,sonnet-loc-s2,127,127,wrong,broken test,,"Writes hgatp on a config without H: illegal instruction. Also expects satp-style ignore, which the H spec rules out. Never ran the sim."
+cva6-d2fdf99a38,opus-loc-s1,1,0,wrong,real deviation,D1,pmpaddr NAPOT readback. Noted the injected MPRV bug and set it aside as upstream behaviour.
+cva6-d2fdf99a38,opus-loc-s3,2,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-d2fdf99a38,sonnet-loc-s2,1,0,wrong,spec misread,,Expects mcause to store 0x1234567; the exception-code field is WLRL.
+cva6-d2fdf99a38,sonnet-loc-s3,127,127,wrong,broken test,,Unfinished CSR probe; agent stopped to ask for LD_LIBRARY_PATH. Never ran the sim.
+cva6-fc5fffba6f,opus-loc-s1,2,0,wrong,real deviation,D1,pmpaddr NAPOT readback. Listed the injected MPV bug among quirks and set it aside.
+cva6-fc5fffba6f,opus-loc-s3,3,0,wrong,real deviation,D1,pmpaddr NAPOT readback.
+cva6-fc5fffba6f,sonnet-loc-s1,1,0,wrong,real deviation,D2,Counter gating.
+cva6-fc5fffba6f,sonnet-loc-s2,1,1,wrong,spec misread,,Expects an unsupported-MODE hgatp write to be ignored entirely; the H spec says the fields stay WARL. Never ran the sim.
+cva6-fc5fffba6f,sonnet-loc-s3,1,0,wrong,real deviation,D2,Counter gating.

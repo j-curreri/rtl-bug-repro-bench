@@ -1,0 +1,35 @@
+diff --git a/core/branch_unit.sv b/core/branch_unit.sv
+index 9c91c60dd..a12ec68c3 100644
+--- a/core/branch_unit.sv
++++ b/core/branch_unit.sv
+@@ -120,9 +120,7 @@ module branch_unit #(
+     branch_exception_o.cause = riscv::INSTR_ADDR_MISALIGNED;
+     branch_exception_o.valid = 1'b0;
+     if (CVA6Cfg.TvalEn)
+-      branch_exception_o.tval = {
+-        {CVA6Cfg.XLEN - CVA6Cfg.VLEN{target_address[CVA6Cfg.VLEN-1]}}, target_address
+-      };
++      branch_exception_o.tval = {{CVA6Cfg.XLEN - CVA6Cfg.VLEN{pc_i[CVA6Cfg.VLEN-1]}}, pc_i};
+     else branch_exception_o.tval = '0;
+     branch_exception_o.tval2 = {CVA6Cfg.GPLEN{1'b0}};
+     branch_exception_o.tinst = '0;
+diff --git a/core/decoder.sv b/core/decoder.sv
+index eed632cb5..7d999b420 100644
+--- a/core/decoder.sv
++++ b/core/decoder.sv
+@@ -1907,7 +1907,6 @@ module decoder
+         end else if (priv_lvl_i == riscv::PRIV_LVL_M) begin
+           instruction_o.ex.cause = riscv::ENV_CALL_MMODE;
+         end
+-        if (CVA6Cfg.TvalEn) instruction_o.ex.tval = '0;
+       end else if (ebreak) begin
+         // this exception is valid
+         instruction_o.ex.valid = 1'b1;
+@@ -1916,7 +1915,6 @@ module decoder
+         // set gva bit
+         if (CVA6Cfg.RVH) instruction_o.ex.gva = v_i;
+         else instruction_o.ex.gva = 1'b0;
+-        if (CVA6Cfg.TvalEn) instruction_o.ex.tval = pc_i;
+       end
+     end
+     // -----------------

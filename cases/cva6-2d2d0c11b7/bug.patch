@@ -1,0 +1,17 @@
+diff --git a/core/cva6_mmu/cva6_mmu.sv b/core/cva6_mmu/cva6_mmu.sv
+index ef7099a1f..b967c416e 100644
+--- a/core/cva6_mmu/cva6_mmu.sv
++++ b/core/cva6_mmu/cva6_mmu.sv
+@@ -570,11 +570,7 @@ module cva6_mmu
+       // later plain HLV load to inherit execute-only permission.
+       g_load_exec_as_read_ok = dtlb_gpte_q.x && (mxr_i || hlvx_inst_q);
+       g_load_access_ok = dtlb_gpte_q.r || g_load_exec_as_read_ok;
+-      d_g_st_access_err = en_ld_st_g_translation_i && (
+-                          !dtlb_gpte_q.u ||
+-                          !dtlb_gpte_q.a ||
+-                          (!lsu_is_store_q && !g_load_access_ok)
+-      );
++      d_g_st_access_err = en_ld_st_g_translation_i && !dtlb_gpte_q.u;
+       dtlb_gpte_n = dtlb_g_content;
+     end
+ 

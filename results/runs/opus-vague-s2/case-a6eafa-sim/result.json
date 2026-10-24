@@ -1,0 +1,27 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "sim",
+  "run_id": "opus-vague-s2",
+  "backend": "claude",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "claude-opus-5-5",
+  "num_turns": 25,
+  "cost_usd": 0.8790891999999999,
+  "duration_s": 207.555,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-9a0e01e383",
+    "elf": "/home/bob/Downloads/rtl-bug-repro-bench/eval/runs/opus-vague-s2/case-a6eafa-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

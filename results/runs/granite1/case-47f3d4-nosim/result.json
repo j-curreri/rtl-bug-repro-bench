@@ -1,0 +1,19 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "nosim",
+  "run_id": "granite1",
+  "backend": "granite",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "granite-4.2-8b",
+  "num_turns": 16,
+  "cost_usd": 2.954072,
+  "duration_s": 1848.701,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-47f3d4-nosim/repro.S: Assembler messages:\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-47f3d4-nosim/repro.S:8: Error: unrecognized opcode `pmp_allow_all'\n/mnt/k3/rtl-bug-repro-bench/eval/runs/granite1/case-47f3d4-nosim/repro.S:16: Error: illegal operands `andi t1,t0,0x0800000000000000'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

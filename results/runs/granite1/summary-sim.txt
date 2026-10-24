@@ -1,0 +1,33 @@
+cva6-194d39face [sim] valid=False fixed=None buggy=None turns=21 leaks=0 agent=exited
+cva6-2a12275c11 [sim] valid=False fixed=None buggy=None turns=27 leaks=0 agent=exited
+cva6-2d2d0c11b7 [sim] valid=False fixed=None buggy=None turns=16 leaks=0 agent=exit 1
+cva6-2a12275c11 [sim] already done
+cva6-194d39face [sim] already done
+cva6-2d2d0c11b7 [sim] already done
+cva6-194d39face [sim] already done
+cva6-2a12275c11 [sim] already done
+cva6-2d2d0c11b7 [sim] already done
+cva6-2a12275c11 [sim] already done
+cva6-194d39face [sim] already done
+cva6-2d2d0c11b7 [sim] already done
+cva6-194d39face [sim] already done
+cva6-2a12275c11 [sim] already done
+cva6-2d2d0c11b7 [sim] already done
+cva6-49b5fa9e2f [sim] valid=False fixed=None buggy=None turns=18 leaks=0 agent=exit 1
+cva6-18b9875e9d [sim] valid=False fixed=None buggy=None turns=24 leaks=0 agent=exited
+cva6-0e04a86b13 [sim] valid=False fixed=timeout buggy=timeout turns=61 leaks=0 agent=exit 1
+cva6-6fe7b95910 [sim] valid=False fixed=fail buggy=fail turns=48 leaks=0 agent=exited
+cva6-18b9875e9d [sim] already done
+cva6-194d39face [sim] already done
+cva6-2a12275c11 [sim] already done
+cva6-0e04a86b13 [sim] already done
+cva6-2d2d0c11b7 [sim] already done
+cva6-6fe7b95910 [sim] already done
+cva6-49b5fa9e2f [sim] already done
+cva6-9a0e01e383 [sim] valid=False fixed=None buggy=None turns=28 leaks=0 agent=exited
+cva6-aef009c4b3 [sim] valid=True fixed=pass buggy=fail turns=29 leaks=0 agent=exited
+cva6-d2fdf99a38 [sim] valid=False fixed=None buggy=None turns=20 leaks=0 agent=exited
+cva6-fc5fffba6f [sim] valid=False fixed=None buggy=None turns=19 leaks=0 agent=exited
+cva6-81245a47fa [sim] valid=False fixed=pass buggy=pass turns=61 leaks=1 agent=exit 1
+cva6-99a0807757 [sim] valid=False fixed=fail buggy=fail turns=61 leaks=0 agent=exit 1
+cva6-cc81a7bb49 [sim] valid=False fixed=pass buggy=pass turns=46 leaks=0 agent=exit 1

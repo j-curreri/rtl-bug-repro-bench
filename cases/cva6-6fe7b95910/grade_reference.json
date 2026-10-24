@@ -1,0 +1,13 @@
+{
+  "case": "cva6-6fe7b95910",
+  "elf": "/home/bob/Downloads/rtl-bug-repro-bench/cases/cva6-6fe7b95910/repro.elf",
+  "fixed": {
+    "outcome": "pass",
+    "tohost": 0
+  },
+  "buggy": {
+    "outcome": "fail",
+    "tohost": 1
+  },
+  "valid": true
+}

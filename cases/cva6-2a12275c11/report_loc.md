@@ -1,0 +1,1 @@
+This core deviates from the RISC-V specifications (privileged, hypervisor, or the extension concerned) in a way that a bare-metal program can observe. The deviation is in `core/cvxif_fu.sv`. No other details are given: find it from the RTL and the specifications.

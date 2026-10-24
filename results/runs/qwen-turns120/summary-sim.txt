@@ -1,0 +1,14 @@
+cva6-2a12275c11 [sim] valid=True fixed=pass buggy=fail turns=57 leaks=0 agent=exited
+cva6-0e04a86b13 [sim] valid=True fixed=pass buggy=fail turns=56 leaks=0 agent=exited
+cva6-194d39face [sim] valid=True fixed=pass buggy=fail turns=76 leaks=0 agent=exited
+cva6-18b9875e9d [sim] valid=False fixed=None buggy=None turns=29 leaks=0 agent=exit 1
+cva6-49b5fa9e2f [sim] valid=True fixed=pass buggy=fail turns=39 leaks=0 agent=exited
+cva6-81245a47fa [sim] valid=True fixed=pass buggy=fail turns=45 leaks=0 agent=exited
+cva6-99a0807757 [sim] valid=True fixed=pass buggy=fail turns=51 leaks=0 agent=exited
+cva6-6fe7b95910 [sim] valid=True fixed=pass buggy=fail turns=100 leaks=2 agent=exited
+cva6-aef009c4b3 [sim] valid=True fixed=pass buggy=fail turns=31 leaks=0 agent=exited
+cva6-cc81a7bb49 [sim] valid=True fixed=pass buggy=fail turns=50 leaks=0 agent=exited
+cva6-d2fdf99a38 [sim] valid=True fixed=pass buggy=fail turns=42 leaks=0 agent=exited
+cva6-2d2d0c11b7 [sim] valid=False fixed=fail buggy=fail turns=100 leaks=0 agent=exited
+cva6-fc5fffba6f [sim] valid=True fixed=pass buggy=fail turns=42 leaks=0 agent=exited
+cva6-9a0e01e383 [sim] valid=False fixed=timeout buggy=timeout turns=121 leaks=1 agent=exit 1

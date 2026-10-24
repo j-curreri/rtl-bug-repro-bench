@@ -1,0 +1,30 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "qwen120-vague-s1",
+  "backend": "qwen",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "qwen38-27b",
+  "num_turns": 118,
+  "cost_usd": 56.71670800000001,
+  "duration_s": 14464.613,
+  "leak_hits": [
+    "hed and repro.S location\\nls -la /work/repro.S; cd /work && git status 2>/dev/null | head -3 || echo \\\"(not a git repo)\\\"\",",
+    " /work && git status 2>/dev/null | head -3 || echo \\\"(not a git repo)\\\"\", \"description\": \"Cleanup scratch, rerun repro, ver"
+  ],
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/qwen120-vague-s1/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}
