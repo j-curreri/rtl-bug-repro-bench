@@ -45,7 +45,7 @@ falls to 20/42 (48%) and 12/42 (29%), Haiku 5.5 to 17/42 (40%) and 12/42 (29%), 
 | `results/` | `episodes.csv` (one row per episode), `SUMMARY.md`, and per episode `runs/<run>/<anon-id>-<cond>/{result.json,repro.S}` |
 | `NOTES.md` | Lab notebook, in date order |
 
-Agent transcripts for the runs before 25 October (529 episodes, 1.5 GB uncompressed) are attached to the GitHub release as
+Agent transcripts (1,026 episodes, 1.6 GB uncompressed) are attached to the GitHub release as
 `transcripts.tar.zst`, with the same `<run>/<anon-id>-<cond>/` layout.
 
 ## Reproducing
