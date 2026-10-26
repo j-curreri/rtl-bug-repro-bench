@@ -1,0 +1,43 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "codex-loc-s3",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 24,
+  "cost_usd": null,
+  "duration_s": 374.1,
+  "leak_hits": [
+    "e\": \"command_execution\", \"command\": \"/bin/bash -lc 'ls -la; git status --short; find .. -name AGENTS.md -print'\", \"aggregat",
+    "x 2 ubuntu ubuntu 4096 Oct 25 08:03 sim\\n/bin/bash: line 1: git: command not found\\nfind: \\u2018../root\\u2019: Permission d",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "h the License.  You may obtain a copy of the License at\\n * http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n        riscv::CSR_MARCHID: csr_rdata = {{CVA6",
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n        riscv::CSR_MARCHID: csr_rdata = {{CVA6",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {
+    "input_tokens": 855381,
+    "cached_input_tokens": 797312,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5482,
+    "reasoning_output_tokens": 3456
+  },
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-loc-s3/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

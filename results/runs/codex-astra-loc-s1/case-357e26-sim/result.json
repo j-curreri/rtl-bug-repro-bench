@@ -1,0 +1,20 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "codex-astra-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 2,
+  "cost_usd": null,
+  "duration_s": 23.467,
+  "leak_hits": [],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

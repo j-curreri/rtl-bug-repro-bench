@@ -1,0 +1,40 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "luna-full-s2",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 23,
+  "cost_usd": null,
+  "duration_s": 191.128,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "o.elf | rg 'data_boundary|u_test|test_main|trap_handler' && git status --short\\\"\", \"aggregated_output\": \"0000000080002000 T",
+    "_test\\n0000000080003000 d data_boundary\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 870599,
+    "cached_input_tokens": 816384,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 11213,
+    "reasoning_output_tokens": 7848
+  },
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s2/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "haiku-loc-s3",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "claude-haiku-5-5",
+  "num_turns": 37,
+  "cost_usd": 0.13115963,
+  "duration_s": 296.393,
+  "leak_hits": [
+    "{\"command\": \"cd /work/core; wc -l csr_regfile.sv; git -C /work status 2>&1 | head -2; ls\", \"description\": \"Check "
+  ],
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-loc-s3/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

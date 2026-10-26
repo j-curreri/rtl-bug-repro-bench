@@ -1,0 +1,29 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "haiku-loc-s2",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "claude-haiku-5-5",
+  "num_turns": 18,
+  "cost_usd": 0.021640169999999997,
+  "duration_s": 96.735,
+  "leak_hits": [
+    "e && find . -name \\\"*.orig\\\" -o -name \\\"*.rej\\\" -o -name \\\".git*\\\" | head\", \"description\": \"Search for other copies of cvxi"
+  ],
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-loc-s2/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 6
+    },
+    "valid": true
+  }
+}

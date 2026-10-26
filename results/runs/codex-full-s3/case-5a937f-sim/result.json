@@ -1,0 +1,37 @@
+{
+  "case": "cva6-cc81a7bb49",
+  "anon_id": "case-5a937f",
+  "condition": "sim",
+  "run_id": "codex-full-s3",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 10,
+  "cost_usd": null,
+  "duration_s": 71.691,
+  "leak_hits": [
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n                    | CVA6Cfg.XLEN'(riscv::MIP"
+  ],
+  "usage": {
+    "input_tokens": 180263,
+    "cached_input_tokens": 158592,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1175,
+    "reasoning_output_tokens": 164
+  },
+  "grade": {
+    "case": "cva6-cc81a7bb49",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-full-s3/case-5a937f-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

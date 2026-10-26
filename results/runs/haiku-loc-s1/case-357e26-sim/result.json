@@ -1,0 +1,27 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "haiku-loc-s1",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.5472145599999999,
+  "duration_s": 1425.349,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-loc-s1/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 4
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": false
+  }
+}

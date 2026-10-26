@@ -1,0 +1,39 @@
+{
+  "case": "cva6-49b5fa9e2f",
+  "anon_id": "case-cb7e9d",
+  "condition": "sim",
+  "run_id": "luna-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 34,
+  "cost_usd": null,
+  "duration_s": 280.017,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Munail Waqa",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; rg -n 'BUG|TODO|FIXME|trigger' TASK.md core",
+    ".sv | head -30\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\nTASK.md:15:Some Sdtrig (mcontrol6) addr"
+  ],
+  "usage": {
+    "input_tokens": 1001538,
+    "cached_input_tokens": 949376,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 14875,
+    "reasoning_output_tokens": 11015
+  },
+  "grade": {
+    "case": "cva6-49b5fa9e2f",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s3/case-cb7e9d-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

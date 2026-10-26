@@ -1,0 +1,37 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "codex-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 13,
+  "cost_usd": null,
+  "duration_s": 130.745,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {
+    "input_tokens": 226289,
+    "cached_input_tokens": 197504,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2839,
+    "reasoning_output_tokens": 1390
+  },
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-vague-s3/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": true
+  }
+}

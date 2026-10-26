@@ -1,0 +1,37 @@
+{
+  "case": "cva6-2d2d0c11b7",
+  "anon_id": "case-2696e8",
+  "condition": "sim",
+  "run_id": "luna-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 12,
+  "cost_usd": null,
+  "duration_s": 93.087,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {
+    "input_tokens": 358388,
+    "cached_input_tokens": 320000,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6198,
+    "reasoning_output_tokens": 4158
+  },
+  "grade": {
+    "case": "cva6-2d2d0c11b7",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s2/case-2696e8-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

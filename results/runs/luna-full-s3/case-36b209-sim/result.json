@@ -1,0 +1,35 @@
+{
+  "case": "cva6-99a0807757",
+  "anon_id": "case-36b209",
+  "condition": "sim",
+  "run_id": "luna-full-s3",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 9,
+  "cost_usd": null,
+  "duration_s": 59.961,
+  "leak_hits": [],
+  "usage": {
+    "input_tokens": 144722,
+    "cached_input_tokens": 119296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3488,
+    "reasoning_output_tokens": 2345
+  },
+  "grade": {
+    "case": "cva6-99a0807757",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s3/case-36b209-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": true
+  }
+}

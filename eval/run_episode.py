@@ -19,6 +19,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -134,15 +135,45 @@ LOCAL_BACKENDS = {
                 "ANTHROPIC_MODEL": "granite-4.2-8b", "ANTHROPIC_SMALL_FAST_MODEL": "granite-4.2-8b",
                 "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "131072",
                 "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"},
+    # SGLang (eval/serve_nemotron.sh) on the RTX PRO 6000, NVFP4 weights.
+    "nemotron": {"ANTHROPIC_BASE_URL": "http://127.0.0.1:8098", "ANTHROPIC_AUTH_TOKEN": "rtlbench-nemotron",
+                 "ANTHROPIC_MODEL": "nemotron-3-super", "ANTHROPIC_SMALL_FAST_MODEL": "nemotron-3-super",
+                 "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "131072",
+                 "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"},
 }
 # Qwen3.8's chat template accepts reasoning effort xhigh (its default), medium or low; Claude
 # Code's default "high" makes SGLang return HTTP 500 on every request (void run qwen1).
 BACKEND_ARGS = {"qwen": ["--effort", "xhigh"]}
+# Codex CLI on the ChatGPT subscription: the static binary is mounted into the same image, and
+# each episode gets a private CODEX_HOME holding only a copy of auth.json (deleted afterwards).
+# `codex exec` has no turn cap, so only the wall-clock timeout bounds an episode.
+# The package dir holds codex plus helpers it spawns from its own bin/ (codex-code-mode-host).
+CODEX_PKG = (pathlib.Path.home() / ".codex/packages/standalone/current").resolve()
+CODEX_AUTH = pathlib.Path.home() / ".codex/auth.json"
+CODEX_MODEL = os.environ.get("RTLBENCH_CODEX_MODEL", "gpt-6.1-sol")
+CODEX_EFFORT = os.environ.get("RTLBENCH_CODEX_EFFORT", "high")
+# Antigravity CLI (agy) on the user's Google account. On the desktop agy keeps its login in the OS
+# keyring; in the container it falls back to a token file, made once by an interactive login with
+# HOME=~/.rtlbench/agy-home. RTLBENCH_AGY_TOKEN picks another login, e.g. the free-tier account in
+# ~/.rtlbench/agy-home2. Each episode gets a private HOME holding only a copy of that file
+# (deleted afterwards). The binary is mounted read-only. Effort is part of
+# the model name (gemini-4-argon-high). agy cannot switch off search_web in its settings, and global
+# hooks load but never fire, so a workspace PreToolUse hook (mounted read-only over /work/.agents)
+# denies the web and browser tools. Like codex exec, agy has no turn cap.
+AGY_BIN = pathlib.Path.home() / ".local/bin/agy"
+AGY_TOKEN = pathlib.Path(os.environ.get(
+    "RTLBENCH_AGY_TOKEN", str(pathlib.Path.home() / ".rtlbench/agy-home/.gemini/antigravity-cli/antigravity-oauth-token"))).resolve()
+AGY_MODEL = os.environ.get("RTLBENCH_AGY_MODEL", "gemini-4-argon-high")
+AGY_NO_WEB = "^(search_web|read_url_content|open_browser_url|read_browser_page|browser_.*|capture_browser_.*|click_browser_pixel|execute_browser_javascript|list_browser_pages)$"
 
 
 def run_agent(ws: pathlib.Path, ep: pathlib.Path, backend: str, model: str | None, max_turns: int,
               timeout_s: int) -> dict:
     name = f"rtlbench-{ep.parent.name}-{ep.name}"
+    if backend == "codex":
+        return run_codex(ws, ep, name, model, timeout_s)
+    if backend == "gemini":
+        return run_agy(ws, ep, name, model, timeout_s)
     if backend == "claude":
         # The subscription token reaches the container by name only (not on the command line).
         env = dict(os.environ, CLAUDE_CODE_OAUTH_TOKEN=TOKEN_FILE.read_text().strip())
@@ -177,6 +208,137 @@ def run_agent(ws: pathlib.Path, ep: pathlib.Path, backend: str, model: str | Non
             subprocess.run(["docker", "kill", name], capture_output=True)
             status = "wall timeout"
     return {"agent_status": status, **summarize_transcript(ep / "transcript.jsonl")}
+
+
+def run_codex(ws: pathlib.Path, ep: pathlib.Path, name: str, model: str | None, timeout_s: int) -> dict:
+    home = ep / "codex-home"
+    home.mkdir()
+    shutil.copy(CODEX_AUTH, home / "auth.json")
+    (home / "auth.json").chmod(0o600)
+    model = model or CODEX_MODEL
+    cmd = ["docker", "run", "--rm", "--name", name,
+           "-v", f"{ws}:/work",
+           "-v", f"{RISCV_GCC}:/opt/riscv:ro",
+           "-v", f"{SPIKE_LIB}:/opt/spike-lib:ro",
+           "-v", f"{CODEX_PKG}:/opt/codex:ro",
+           "-v", f"{home}:/codex-home",
+           "-e", "CODEX_HOME=/codex-home",
+           "-e", "LD_LIBRARY_PATH=/opt/spike-lib",
+           "-e", "PATH=/opt/codex/bin:/opt/codex/codex-path:/opt/riscv/bin:/usr/local/bin:/usr/bin:/bin",
+           IMAGE, "codex", "exec", "--json", "--dangerously-bypass-approvals-and-sandbox",
+           "--skip-git-repo-check", "--ephemeral", "--ignore-user-config", "-C", "/work",
+           "-m", model, "-c", f'model_reasoning_effort="{CODEX_EFFORT}"', "-c", 'web_search="disabled"',
+           "Read TASK.md and complete the task."]
+    t0 = time.time()
+    try:
+        with open(ep / "transcript.jsonl", "w") as log:
+            try:
+                p = subprocess.run(cmd, stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT,
+                                   timeout=timeout_s)
+                status = "exited" if p.returncode == 0 else f"exit {p.returncode}"
+            except subprocess.TimeoutExpired:
+                subprocess.run(["docker", "kill", name], capture_output=True)
+                status = "wall timeout"
+    finally:
+        shutil.rmtree(home, ignore_errors=True)
+    return {"agent_status": status, "model": model, "effort": CODEX_EFFORT,
+            **summarize_codex(ep / "transcript.jsonl"), "duration_s": round(time.time() - t0, 3)}
+
+
+def run_agy(ws: pathlib.Path, ep: pathlib.Path, name: str, model: str | None, timeout_s: int) -> dict:
+    home = ep / "agy-home"
+    (home / ".gemini/antigravity-cli").mkdir(parents=True)
+    shutil.copy(AGY_TOKEN, home / ".gemini/antigravity-cli" / AGY_TOKEN.name)
+    (home / ".gemini/antigravity-cli" / AGY_TOKEN.name).chmod(0o600)
+    (home / ".gemini/antigravity-cli/settings.json").write_text(json.dumps(
+        {"trustedWorkspaces": ["/work"], "permissions": {"deny": ["read_url(*)", "execute_url(*)"]}}))
+    hooks = ep / "agy-hooks"
+    hooks.mkdir()
+    (hooks / "no-web.sh").write_text("#!/bin/sh\ncat > /dev/null\n"
+                                     "echo '{\"decision\":\"deny\",\"reason\":\"Web access is disabled.\"}'\n")
+    (hooks / "no-web.sh").chmod(0o755)
+    (hooks / "hooks.json").write_text(json.dumps({"no-web": {"PreToolUse": [
+        {"matcher": AGY_NO_WEB, "hooks": [{"type": "command", "command": "/work/.agents/no-web.sh", "timeout": 10}]}]}}))
+    (ws / ".agents").mkdir()
+    # agy runs commands on a pty. Plain `timeout` puts the simulator in a background process group,
+    # where the tty stops it (state T) before the 200 s limit can fire, so every run hung.
+    run_sh = ws / "sim/run.sh"
+    if run_sh.exists():
+        run_sh.write_text(run_sh.read_text().replace("timeout 200 ", "timeout --foreground 200 ")
+                          .replace('.elf" 2>&1 || true)', '.elf" </dev/null 2>&1 || true)'))
+    model = model or AGY_MODEL
+    cmd = ["docker", "run", "--rm", "--name", name,
+           "-v", f"{ws}:/work",
+           "-v", f"{hooks}:/work/.agents:ro",
+           "-v", f"{RISCV_GCC}:/opt/riscv:ro",
+           "-v", f"{SPIKE_LIB}:/opt/spike-lib:ro",
+           "-v", f"{AGY_BIN}:/opt/agy/agy:ro",
+           "-v", f"{home}:/agy-home",
+           "-e", "HOME=/agy-home", "-w", "/work",
+           "-e", "LD_LIBRARY_PATH=/opt/spike-lib",
+           "-e", "PATH=/opt/agy:/opt/riscv/bin:/usr/local/bin:/usr/bin:/bin",
+           IMAGE, "agy", "-p", "Read TASK.md and complete the task.",
+           "--output-format", "stream-json", "--dangerously-skip-permissions", "--model", model]
+    t0 = time.time()
+    try:
+        with open(ep / "transcript.jsonl", "w") as log:
+            try:
+                p = subprocess.run(cmd, stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT,
+                                   timeout=timeout_s)
+                status = "exited" if p.returncode == 0 else f"exit {p.returncode}"
+            except subprocess.TimeoutExpired:
+                subprocess.run(["docker", "kill", name], capture_output=True)
+                status = "wall timeout"
+    finally:
+        shutil.rmtree(home, ignore_errors=True)
+    shutil.rmtree(ws / ".agents", ignore_errors=True)
+    return {"agent_status": status, "model": model, "effort": model.rsplit("-", 1)[-1],
+            "agy_account": AGY_TOKEN.parents[2].name,  # login home dir: agy-home (main) or agy-home2 (free tier)
+            **summarize_agy(ep / "transcript.jsonl"), "duration_s": round(time.time() - t0, 3)}
+
+
+def summarize_agy(path: pathlib.Path) -> dict:
+    # num_turns counts finished tool steps; web_denied counts calls the no-web hook blocked.
+    info = {"num_turns": 0, "cost_usd": None, "leak_hits": [], "usage": {}, "web_denied": 0, "agy_status": None}
+    for line in path.read_text().splitlines():
+        try:
+            ev = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        su = ev.get("step_update") or {}
+        if su.get("step_type") == "tool" and su.get("state") in ("DONE", "ERROR"):
+            info["num_turns"] += 1
+            tool = su.get("tool_info") or {}
+            if "pre-tool hook" in json.dumps(tool.get("error") or ""):
+                info["web_denied"] += 1
+            text = json.dumps(tool.get("parameters"))
+            for m in LEAK_RE.finditer(text):
+                info["leak_hits"].append(text[max(0, m.start() - 60): m.end() + 60])
+        if ev.get("event") == "result":
+            info["agy_status"] = ev["result"].get("status")
+            info["usage"] = ev["result"].get("usage") or {}
+    return info
+
+
+def summarize_codex(path: pathlib.Path) -> dict:
+    # num_turns counts tool calls (commands, file edits), the closest analogue of Claude Code turns.
+    info = {"num_turns": 0, "cost_usd": None, "duration_s": None, "leak_hits": [], "usage": {}}
+    for line in path.read_text().splitlines():
+        try:
+            ev = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        item = ev.get("item") or {}
+        if ev.get("type") == "item.completed" and item.get("type") not in (None, "agent_message", "reasoning"):
+            info["num_turns"] += 1
+            text = json.dumps(item)
+            for m in LEAK_RE.finditer(text):
+                info["leak_hits"].append(text[max(0, m.start() - 60): m.end() + 60])
+        if ev.get("type") == "turn.completed":
+            for k, v in (ev.get("usage") or {}).items():
+                if isinstance(v, int):
+                    info["usage"][k] = info["usage"].get(k, 0) + v
+    return info
 
 
 def summarize_transcript(path: pathlib.Path) -> dict:
@@ -229,7 +391,7 @@ def main():
     ap.add_argument("case", type=pathlib.Path)
     ap.add_argument("--condition", choices=["sim", "nosim"], required=True)
     ap.add_argument("--run-id", required=True)
-    ap.add_argument("--backend", choices=["claude", *LOCAL_BACKENDS], default="claude")
+    ap.add_argument("--backend", choices=["claude", "codex", "gemini", *LOCAL_BACKENDS], default="claude")
     ap.add_argument("--model")
     ap.add_argument("--tier", choices=["full", "vague", "loc"], default="full",
                     help="report detail: symptom (full), subsystem only (vague), or file only (loc)")

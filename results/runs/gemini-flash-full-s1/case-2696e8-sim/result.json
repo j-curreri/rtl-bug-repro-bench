@@ -1,0 +1,41 @@
+{
+  "case": "cva6-2d2d0c11b7",
+  "anon_id": "case-2696e8",
+  "condition": "sim",
+  "run_id": "gemini-flash-full-s1",
+  "backend": "gemini",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gemini-3.8-flash-high",
+  "effort": "high",
+  "num_turns": 84,
+  "cost_usd": null,
+  "leak_hits": [
+    "{\"CommandLine\": \"cd /work && git status; cd /work/core && git status; cd /work/core && git l",
+    "{\"CommandLine\": \"cd /work && git status; cd /work/core && git status; cd /work/core && git log -n 5 --oneline\"}",
+    "& git status; cd /work/core && git status; cd /work/core && git log -n 5 --oneline\"}"
+  ],
+  "usage": {
+    "input_tokens": 311101,
+    "output_tokens": 54770,
+    "thinking_tokens": 47529,
+    "cache_read_tokens": 5375560,
+    "total_tokens": 365871
+  },
+  "web_denied": 0,
+  "agy_status": "SUCCESS",
+  "duration_s": 757.145,
+  "grade": {
+    "case": "cva6-2d2d0c11b7",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-flash-full-s1/case-2696e8-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

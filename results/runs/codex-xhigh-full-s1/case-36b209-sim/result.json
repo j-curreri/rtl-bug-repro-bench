@@ -1,0 +1,23 @@
+{
+  "case": "cva6-99a0807757",
+  "anon_id": "case-36b209",
+  "condition": "sim",
+  "run_id": "codex-xhigh-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "num_turns": 6,
+  "cost_usd": null,
+  "duration_s": 79.812,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work 2>/dev/null\\\"\", \"aggregated_output\": \"/work\\n/wor",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

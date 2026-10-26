@@ -1,0 +1,27 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "sim",
+  "run_id": "haiku-vague-s2",
+  "backend": "claude",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "claude-haiku-5-5",
+  "num_turns": 23,
+  "cost_usd": 0.03374457000000001,
+  "duration_s": 209.183,
+  "leak_hits": [],
+  "grade": {
+    "case": "cva6-9a0e01e383",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-vague-s2/case-a6eafa-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "codex-astra-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 2,
+  "cost_usd": null,
+  "duration_s": 30.297,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"'\\\"\", \"aggregated_output\": \"/work\\nTASK.md\\n\", \"exit_code"
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

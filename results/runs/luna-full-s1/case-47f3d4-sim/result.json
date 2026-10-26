@@ -1,0 +1,38 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "luna-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 8,
+  "cost_usd": null,
+  "duration_s": 43.702,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "9\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short 2>/dev/null || true'\", \"aggregated_output\": "
+  ],
+  "usage": {
+    "input_tokens": 179019,
+    "cached_input_tokens": 154240,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2383,
+    "reasoning_output_tokens": 1493
+  },
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s1/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

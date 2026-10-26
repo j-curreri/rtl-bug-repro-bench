@@ -1,0 +1,39 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "luna-full-s2",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 9,
+  "cost_usd": null,
+  "duration_s": 55.372,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "and\": \"/bin/bash -lc 'tail -40 sim/out/trace_hart_0.dasm && git status --short'\", \"aggregated_output\": \"                415",
+    "376 0x890 D (0x7b200073) DASM(7b200073)\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 182958,
+    "cached_input_tokens": 159104,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3731,
+    "reasoning_output_tokens": 2562
+  },
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s2/case-1ae444-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": true
+  }
+}

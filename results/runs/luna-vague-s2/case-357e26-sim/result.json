@@ -1,0 +1,61 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "luna-vague-s2",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 30,
+  "cost_usd": null,
+  "duration_s": 299.896,
+  "leak_hits": [
+    "e-underflow-properly-at-subnormal-normal-bo.patch:10:diff --git a/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfd",
+    "0001-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:17:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_ctrl.v b/C910",
+    "0001-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:98:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_double.v b/C9",
+    "001-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:241:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_pack.v b/C910",
+    "001-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:379:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_prepare.v b/C",
+    "001-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:610:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_round.v b/C91",
+    "001-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:927:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_scalar_dp.v b",
+    "01-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:1030:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_srt.v b/C910_",
+    "01-Add-FP16ALT-support-to-THMULTI-DivSqrt.patch:1284:diff --git a/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_top.v b/C910_",
+    "or/patches/opene906/0001-Patch-pa_fpu_frbus.patch:10:diff --git a/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_frbus.v b/E906_RT",
+    "endor/patches/opene906/0001-Patch-pa_fpu_fp.patch:10:diff --git a/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v b/E906_RTL_F",
+    "e906/0001-fdsu.pack-Correct-Underflow-logic.patch:15:diff --git a/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v b",
+    "patches/opene906/0001-Patch-pa_fdsu_prepare.patch:10:diff --git a/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_prepare.v b/E90",
+    "make/GtestDownloadCMakeLists.txt.in:5:    GIT_REPOSITORY    https://github.com/google/googletest.git\\ncore/pmp/include/riscv.sv:",
+    "stDownloadCMakeLists.txt.in:5:    GIT_REPOSITORY    https://github.com/google/googletest.git\\ncore/pmp/include/riscv.sv:28:   ",
+    ":    GIT_REPOSITORY    https://github.com/google/googletest.git\\ncore/pmp/include/riscv.sv:28:    TOR   = 2'b01,\\ncore/pmp/",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "n hardware license in the context of the PULP platform\\n// (http://www.pulp-platform.org), under the copyright of ETH Zurich an",
+    "7\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short && git diff -- core/pmp core/csr_regfile.sv ",
+    "xecution\", \"command\": \"/bin/bash -lc 'git status --short && git diff -- core/pmp core/csr_regfile.sv core/cva6_mmu/pmp_data",
+    ".sv core/cva6_mmu/pmp_data_if.sv 2>/dev/null | head -250 && git log -1 --oneline'\", \"aggregated_output\": \"/bin/bash: line 1",
+    "og -1 --oneline'\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 1978758,
+    "cached_input_tokens": 1918720,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 21030,
+    "reasoning_output_tokens": 15780
+  },
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s2/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "valid": false
+  }
+}

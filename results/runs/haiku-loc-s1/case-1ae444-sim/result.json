@@ -1,0 +1,18 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "haiku-loc-s1",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.64901747,
+  "duration_s": 781.435,
+  "leak_hits": [],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

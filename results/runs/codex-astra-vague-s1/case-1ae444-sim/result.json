@@ -1,0 +1,37 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "codex-astra-vague-s1",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 11,
+  "cost_usd": null,
+  "duration_s": 126.799,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"'\\\"\", \"aggregated_output\": \"/work\\nTASK.md\\n\", \"exit_code"
+  ],
+  "usage": {
+    "input_tokens": 226188,
+    "cached_input_tokens": 193664,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1759,
+    "reasoning_output_tokens": 260
+  },
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-astra-vague-s1/case-1ae444-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

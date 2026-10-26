@@ -1,0 +1,40 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "luna-loc-s3",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 19,
+  "cost_usd": null,
+  "duration_s": 221.873,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short && sed -n '90,150p' core/include/ariane_pkg.",
+    ".sv | head -50\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 816475,
+    "cached_input_tokens": 737664,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7652,
+    "reasoning_output_tokens": 5691
+  },
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s3/case-1ae444-sim/repro.elf",
+    "fixed": {
+      "outcome": "timeout",
+      "tohost": null
+    },
+    "buggy": {
+      "outcome": "timeout",
+      "tohost": null
+    },
+    "valid": false
+  }
+}

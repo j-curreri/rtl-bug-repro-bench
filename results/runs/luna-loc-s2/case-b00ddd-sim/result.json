@@ -1,0 +1,42 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "luna-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 10,
+  "cost_usd": null,
+  "duration_s": 57.386,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Guillaume C",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Guillaume C",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Guillaume C",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Guillaume C",
+    "and\": \"/bin/bash -lc 'tail -60 sim/out/trace_hart_0.dasm && git status --short'\", \"aggregated_output\": \"                405",
+    "376 0x890 D (0x7b200073) DASM(7b200073)\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 269427,
+    "cached_input_tokens": 240896,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3328,
+    "reasoning_output_tokens": 1811
+  },
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s2/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

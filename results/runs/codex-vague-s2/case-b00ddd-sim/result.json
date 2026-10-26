@@ -1,0 +1,31 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "codex-vague-s2",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 12,
+  "cost_usd": null,
+  "duration_s": 197.873,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work / 2>/dev/null | head -100\\\"\", \"aggregated_output\""
+  ],
+  "usage": {},
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-vague-s2/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": false
+  }
+}

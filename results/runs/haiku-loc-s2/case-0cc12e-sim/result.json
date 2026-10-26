@@ -1,0 +1,20 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "haiku-loc-s2",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.52115617,
+  "duration_s": 933.503,
+  "leak_hits": [
+    "\" | head; ls -la /work/core | head -20; find /work -name \\\".git*\\\" -maxdepth 3 2>/dev/null | head -3\", \"description\": \"Sear"
+  ],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

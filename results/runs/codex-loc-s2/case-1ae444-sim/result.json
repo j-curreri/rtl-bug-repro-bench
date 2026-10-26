@@ -1,0 +1,40 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "codex-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 21,
+  "cost_usd": null,
+  "duration_s": 231.888,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n        riscv::CSR_MARCHID: csr_rdata = {{CVA6",
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n        riscv::CSR_MARCHID: csr_rdata = {{CVA6",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {
+    "input_tokens": 837844,
+    "cached_input_tokens": 762880,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4190,
+    "reasoning_output_tokens": 2206
+  },
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-loc-s2/case-1ae444-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

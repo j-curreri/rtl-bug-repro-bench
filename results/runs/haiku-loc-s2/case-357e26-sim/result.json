@@ -1,0 +1,30 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "haiku-loc-s2",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "claude-haiku-5-5",
+  "num_turns": 52,
+  "cost_usd": 0.54869344,
+  "duration_s": 1294.782,
+  "leak_hits": [
+    ".orig\\\" -o -name \\\"*.bak\\\" -o -name \\\"*.patch\\\" -o -name \\\".git\\\" 2>/dev/null | head\", \"description\": \"Look for other copie",
+    "ead\", \"description\": \"Look for other copies of pmp_entry or git history\"}"
+  ],
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-loc-s2/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

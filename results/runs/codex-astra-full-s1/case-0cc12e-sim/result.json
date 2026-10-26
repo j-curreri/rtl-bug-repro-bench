@@ -1,0 +1,35 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "codex-astra-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 8,
+  "cost_usd": null,
+  "duration_s": 86.41,
+  "leak_hits": [],
+  "usage": {
+    "input_tokens": 147245,
+    "cached_input_tokens": 130688,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1179,
+    "reasoning_output_tokens": 212
+  },
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-astra-full-s1/case-0cc12e-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 4
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "gemini-argon-full-s1",
+  "backend": "gemini",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gemini-4-argon-high",
+  "effort": "high",
+  "num_turns": 60,
+  "cost_usd": null,
+  "leak_hits": [],
+  "usage": {
+    "input_tokens": 182027,
+    "output_tokens": 36437,
+    "thinking_tokens": 31637,
+    "cache_read_tokens": 3540594,
+    "total_tokens": 218464
+  },
+  "web_denied": 0,
+  "agy_status": "SUCCESS",
+  "duration_s": 646.811,
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-argon-full-s1/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 4
+    },
+    "valid": true
+  }
+}

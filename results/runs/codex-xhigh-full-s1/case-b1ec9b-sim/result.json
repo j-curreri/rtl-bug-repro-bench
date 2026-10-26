@@ -1,0 +1,23 @@
+{
+  "case": "cva6-d2fdf99a38",
+  "anon_id": "case-b1ec9b",
+  "condition": "sim",
+  "run_id": "codex-xhigh-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "num_turns": 2,
+  "cost_usd": null,
+  "duration_s": 15.976,
+  "leak_hits": [
+    "-files -g AGENTS.md -g '\\\"'!core/cvfpu/tb/flexfloat/**'\\\"'; git status --short; ls -la; ls -la harness\\\"\", \"aggregated_outp",
+    "tory. Finish by leaving `repro.S` here.\\n/bin/bash: line 1: git: command not found\\ntotal 24\\ndrwxrwxr-x 5 ubuntu ubuntu 40"
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

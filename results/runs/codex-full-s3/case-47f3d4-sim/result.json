@@ -1,0 +1,37 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "codex-full-s3",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 9,
+  "cost_usd": null,
+  "duration_s": 50.197,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work\\\"\", \"aggregated_output\": \"/work\\n/work/TASK.md\\n\""
+  ],
+  "usage": {
+    "input_tokens": 187012,
+    "cached_input_tokens": 150528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1067,
+    "reasoning_output_tokens": 190
+  },
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-full-s3/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

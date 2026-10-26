@@ -1,7 +1,7 @@
 # rtl-bug-repro-bench
 
 Can a coding agent turn a bug report into a failing test for real processor RTL? This
-benchmark gives an agent (headless Claude Code, sandboxed in Docker) the RTL of a CVA6 RISC-V
+benchmark gives an agent (headless Claude Code, Codex CLI or Antigravity CLI, sandboxed in Docker) the RTL of a CVA6 RISC-V
 core with one real upstream bug put back in, a bare-metal test harness, and a written report.
 The agent must write `repro.S`. It scores only if the program **passes on the fixed core and
 does not pass on the buggy core**.
@@ -18,10 +18,20 @@ Bugs reproduced, full bug report, 14 cases (all numbers: [`results/SUMMARY.md`](
 | Qwen3.8-27B (3 samples, 60-turn cap) | 19/42 (45%) | 23/42 (55%) |
 | Qwen3.8-27B (1 sample, 120-turn cap) | 11/14 (79%) | - |
 | Granite 4.2 8B (1 sample) | 1/14 (7%) | 0/14 (0%) |
+| Gemini 4 Argon (Antigravity, 1 sample) | 14/14 (100%) | - |
+| Claude Haiku 5.5 (3 samples) | 38/42 (90%) | - |
+| Gemini 3.8 Flash (Antigravity, 1 sample) | 13/14 (93%) | - |
+| GPT-6 Luna (Codex, 3 samples) | 33/42 (79%) | - |
+| GPT-6.1 Sol (Codex, 3 samples) | 23/42 (55%) | - |
+| GPT-6 Astra (Codex, 1 sample) | 6/14 (43%) | - |
+
+GPT-6.1 Sol and GPT-6 Astra lose most of their misses to OpenAI's cyber-risk classifier, which
+ends the session; GPT-6.1 reproduced 31 of the 32 episodes it was allowed to finish.
 
 With less detail in the report (simulator, 3 samples), Opus 5.5 falls to 25/42 (60%) given one
 sentence naming the subsystem and to 16/42 (38%) given only the patched file names; Sonnet 5.5
-falls to 20/42 (48%) and 12/42 (29%).
+falls to 20/42 (48%) and 12/42 (29%), Haiku 5.5 to 17/42 (40%) and 12/42 (29%), and GPT-6 Luna to
+16/42 (38%) and 4/42 (10%).
 
 ## Layout
 
@@ -35,7 +45,7 @@ falls to 20/42 (48%) and 12/42 (29%).
 | `results/` | `episodes.csv` (one row per episode), `SUMMARY.md`, and per episode `runs/<run>/<anon-id>-<cond>/{result.json,repro.S}` |
 | `NOTES.md` | Lab notebook, in date order |
 
-Agent transcripts (529 episodes, 1.5 GB uncompressed) are attached to the GitHub release as
+Agent transcripts for the runs before 25 October (529 episodes, 1.5 GB uncompressed) are attached to the GitHub release as
 `transcripts.tar.zst`, with the same `<run>/<anon-id>-<cond>/` layout.
 
 ## Reproducing
@@ -56,30 +66,38 @@ Requirements: Linux, Docker, [OSS CAD Suite](https://github.com/YosysHQ/oss-cad-
 5. Run episodes: `eval/run_batch.sh <run-id> <sim|nosim> <parallel> --model opus --tier full`.
    Claude backends read an OAuth token from `~/.config/rtlbench/token`; local backends
    (`--backend glm|qwen|granite`) expect an Anthropic-compatible server on the ports in
-   `run_episode.py`.
+   `run_episode.py`. `--backend codex` mounts the host's Codex CLI and copies `~/.codex/auth.json`
+   into a per-episode home (model and effort from `RTLBENCH_CODEX_MODEL` / `RTLBENCH_CODEX_EFFORT`).
+   `--backend gemini` runs the Antigravity CLI with a token file from an interactive login with
+   `HOME=~/.rtlbench/agy-home` (model from `RTLBENCH_AGY_MODEL`, token from `RTLBENCH_AGY_TOKEN`).
 
 Some serving scripts (`eval/serve_granite.sh`, `eval/recover_qwen.sh`) contain paths from the
 original machine; adjust them for yours.
 
 ## Notes on the data
 
-- **Void episodes** (cut off by the subscription usage limit or a provider API error) were
+- **Void episodes** (cut off by a subscription usage limit or quota, on any of the three CLIs, or by a provider API error) were
   deleted and rerun; any left are marked `void=1` in `episodes.csv` and excluded from the tables.
 - **Excluded runs:** `qwen1` (Qwen's chat template rejected Claude Code's default reasoning
   effort, so every request failed), `opus1-retry` (a rerun of one episode a safety classifier
-  stopped; the original stays as the sample), and the harness bring-up pilots.
+  stopped; the original stays as the sample), the harness bring-up pilots and `*-smoke` runs, and
+  `nemotron-full-s1` (unfinished).
+- **Opus 5.5 through Antigravity** (`agy-opus-full-s*`) is a side experiment on the three cases
+  where Anthropic's classifier fired under Claude Code: 8/9 reproduced, and Google's
+  content-safety filter ended 7 of the 9 sessions.
 - **`sandbox_flags`** counts tool calls that mention a URL, git, curl, wget, the upstream org or
   the case directory. They mark attempts; the sandbox has no download tools and no access to
   the case files.
 - **Contamination:** 11 of the 14 fixes landed upstream in August-September 2026. 0e04a86b13 and
   aef009c4b3 (March 2026) and 18b9875e9d (June 2026) may be in the models' training data.
-- **Withheld reproducers:** four episodes (`opus-loc-s1`, `opus-loc-s2`, `opus-loc-s3`,
-  `sonnet-vague-s3`) found a distinct, unfixed deviation that has been reported privately
+- **Withheld reproducers:** six episodes (`opus-loc-s1`, `opus-loc-s2`, `opus-loc-s3`,
+  `sonnet-vague-s3`, and two in `gemini-flash-loc-s1`) found a distinct, unfixed deviation that has been reported privately
   upstream. Their `repro.S` is replaced by a notice and their transcripts are left out of
   `transcripts.tar.zst`; `result.json` and the `episodes.csv` rows are kept.
 - **Opus 4.8 fallback:** in 8 Opus episodes a refusal classifier switched the session to Opus
   4.8; they are still labelled Opus 5.5. See `analysis/cyber_downgrades.md`.
-- `cost_usd` is Claude Code's API-price estimate. For local models it is meaningless.
+- `cost_usd` is Claude Code's API-price estimate. For local models it is meaningless, and Codex
+  and Antigravity episodes record token counts instead (`usage` in `result.json`).
 
 ## License
 

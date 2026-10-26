@@ -1,0 +1,38 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "sim",
+  "run_id": "luna-full-s2",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 6,
+  "cost_usd": null,
+  "duration_s": 61.824,
+  "leak_hits": [
+    "v-none-elf-objdump -d harness/build/repro.elf | tail -65 && git status --short\\\"\", \"aggregated_output\": \"#include \\\"hyp.h\\\"",
+    "   800020e6:\\t0001                \\tnop\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 123745,
+    "cached_input_tokens": 88576,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4584,
+    "reasoning_output_tokens": 3540
+  },
+  "grade": {
+    "case": "cva6-9a0e01e383",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s2/case-a6eafa-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

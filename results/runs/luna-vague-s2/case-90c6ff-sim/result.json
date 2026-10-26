@@ -1,0 +1,38 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "luna-vague-s2",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 18,
+  "cost_usd": null,
+  "duration_s": 98.147,
+  "leak_hits": [
+    "on\", \"command\": \"/bin/bash -lc \\\"sed -n '1,140p' repro.S && git status --short\\\"\", \"aggregated_output\": \"#include \\\"hyp.h\\\"",
+    "p_handler:\\n  FAIL(127)\\n\\n  HYP_TABLES\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 621804,
+    "cached_input_tokens": 583552,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6220,
+    "reasoning_output_tokens": 4084
+  },
+  "grade": {
+    "case": "cva6-18b9875e9d",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s2/case-90c6ff-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "valid": false
+  }
+}

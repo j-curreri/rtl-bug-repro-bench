@@ -1,0 +1,39 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "gemini-flash-full-s1",
+  "backend": "gemini",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gemini-3.8-flash-high",
+  "effort": "high",
+  "num_turns": 128,
+  "cost_usd": null,
+  "leak_hits": [
+    "{\"CommandLine\": \"git log -n 5 --oneline\"}"
+  ],
+  "usage": {
+    "input_tokens": 435141,
+    "output_tokens": 49131,
+    "thinking_tokens": 39925,
+    "cache_read_tokens": 9564536,
+    "total_tokens": 484272
+  },
+  "web_denied": 0,
+  "agy_status": "SUCCESS",
+  "duration_s": 833.993,
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-flash-full-s1/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

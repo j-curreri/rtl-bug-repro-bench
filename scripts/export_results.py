@@ -16,15 +16,21 @@ from collections import defaultdict
 # qwen1: chat template rejected Claude Code's effort level, every request HTTP 500.
 # pilot, glm-pilot: harness bring-up. opus1-retry: rerun of one classifier-stopped episode;
 # the original stays as sample 1. glm-d6-*: one case only (the D6 hunt), not a tier sample.
-EXCLUDE = {"qwen1", "pilot", "glm-pilot", "opus1-retry"}
+# *-smoke: backend bring-up. nemotron-full-s1: unfinished run, on hold.
+EXCLUDE = {"qwen1", "pilot", "glm-pilot", "opus1-retry", "codex-smoke", "gemini-smoke", "gemini2-smoke",
+           "nemotron-full-s1"}
 EXCLUDE_PREFIX = ("glm-d6-",)
 # These and qwen120-* runs use a 120-turn cap; every other run uses the 60-turn default
 # (result.json does not record the cap).
 TURN_CAP_120 = {"qwen-turns120"}
-VOID_RE =re.compile(r'hit your (session|weekly) limit|"api_error_status":[0-9]')
+# Claude Code session/weekly limit or API error; Codex usage limit; Antigravity quota.
+VOID_RE = re.compile(r'hit your (session|weekly|usage) limit|"api_error_status":[0-9]|Individual quota reached')
 MODELS = {"claude-opus-5-5": "Opus 5.5", "claude-sonnet-5-5": "Sonnet 5.5",
           "GLM-5.3-Flash-FTW": "GLM 5.3 Flash", "qwen38-27b": "Qwen3.8-27B",
-          "granite-4.2-8b": "Granite 4.2 8B"}
+          "granite-4.2-8b": "Granite 4.2 8B", "claude-haiku-5-5": "Haiku 5.5",
+          "gpt-6.1-sol": "GPT-6.1 Sol", "gpt-6-luna": "GPT-6 Luna", "gpt-6-astra": "GPT-6 Astra",
+          "gemini-3.8-flash-high": "Gemini 3.8 Flash", "gemini-4-argon-high": "Gemini 4 Argon",
+          "claude-opus-5-5-high": "Opus 5.5 (Antigravity)"}
 FIELDS = ["run", "case", "anon_id", "model", "backend", "tier", "condition", "reproduced",
           "fixed", "buggy", "grade_error", "turns", "duration_s", "cost_usd", "sandbox_flags",
           "agent_status", "void", "excluded"]
@@ -43,11 +49,13 @@ def episodes(root):
         d = json.loads(f.read_text())
         g = d.get("grade") or {}
         t = f.parent / "transcript.jsonl"
-        api = d.get("backend") in (None, "claude")
+        api = d.get("backend") in (None, "claude", "codex", "gemini")
         void = api and t.exists() and bool(VOID_RE.search(t.read_text(errors="ignore")))
         model = MODELS.get(d.get("model"), d.get("model"))
         if run in TURN_CAP_120 or run.startswith("qwen120-"):
             model += " (120-turn cap)"
+        if d.get("backend") == "codex" and d.get("effort") == "xhigh":
+            model += " (effort xhigh)"
         yield {"run": run, "case": d["case"], "anon_id": d.get("anon_id"),
                "model": model, "backend": d.get("backend") or "claude",
                "tier": d.get("tier", "full"), "condition": d.get("condition"),

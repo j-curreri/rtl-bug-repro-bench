@@ -1,0 +1,40 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "luna-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 27,
+  "cost_usd": null,
+  "duration_s": 160.739,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n * http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; sed -n '470,670p' core/csr_regfile.sv; sed ",
+    "e/riscv_pkg.sv\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n        // Trigger module registers\\n  "
+  ],
+  "usage": {
+    "input_tokens": 1360701,
+    "cached_input_tokens": 1300736,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 11355,
+    "reasoning_output_tokens": 8443
+  },
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s2/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

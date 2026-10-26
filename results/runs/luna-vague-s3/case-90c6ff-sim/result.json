@@ -1,0 +1,39 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "luna-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 12,
+  "cost_usd": null,
+  "duration_s": 142.87,
+  "leak_hits": [
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; sed -n '110,180p' core/cva6_mmu/cva6_ptw.sv",
+    ".sv | head -80\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n    WAIT_RVALID,\\n    PROPAGATE_ERROR,\\",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {
+    "input_tokens": 395428,
+    "cached_input_tokens": 362240,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7882,
+    "reasoning_output_tokens": 5961
+  },
+  "grade": {
+    "case": "cva6-18b9875e9d",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s3/case-90c6ff-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "valid": false
+  }
+}

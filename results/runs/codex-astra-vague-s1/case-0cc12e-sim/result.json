@@ -1,0 +1,31 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "codex-astra-vague-s1",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 9,
+  "cost_usd": null,
+  "duration_s": 111.115,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {},
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-astra-vague-s1/case-0cc12e-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 4
+    },
+    "valid": true
+  }
+}

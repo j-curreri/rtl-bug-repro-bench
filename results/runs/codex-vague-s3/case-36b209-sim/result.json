@@ -1,0 +1,20 @@
+{
+  "case": "cva6-99a0807757",
+  "anon_id": "case-36b209",
+  "condition": "sim",
+  "run_id": "codex-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 10,
+  "cost_usd": null,
+  "duration_s": 67.579,
+  "leak_hits": [],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

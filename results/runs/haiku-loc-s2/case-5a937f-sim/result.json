@@ -1,0 +1,29 @@
+{
+  "case": "cva6-cc81a7bb49",
+  "anon_id": "case-5a937f",
+  "condition": "sim",
+  "run_id": "haiku-loc-s2",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.30500464,
+  "duration_s": 1135.517,
+  "leak_hits": [
+    "_regfile.sv; ls -a /work/core | head -30; ls -a /work/core/.git 2>/dev/null | head -3\", \"description\": \"Check structure of "
+  ],
+  "grade": {
+    "case": "cva6-cc81a7bb49",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-loc-s2/case-5a937f-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "valid": false
+  }
+}

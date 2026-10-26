@@ -1,0 +1,47 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "gemini-flash-vague-s1",
+  "backend": "gemini",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gemini-3.8-flash-high",
+  "effort": "high",
+  "agy_account": "agy-home",
+  "num_turns": 160,
+  "cost_usd": null,
+  "leak_hits": [
+    "{\"CommandLine\": \"git status; git log -n 5 --oneline\"}",
+    "{\"CommandLine\": \"git status; git log -n 5 --oneline\"}",
+    "{\"CommandLine\": \"find /work -name \\\".git\\\"\"}",
+    "ndLine\": \"echo $PATH; find /usr /bin /opt /agy-home -name \\\"git\\\" 2>/dev/null\"}",
+    "{\"CommandLine\": \"find / -name \\\"*.git\\\" 2>/dev/null\"}",
+    "{\"CommandLine\": \"find / -name \\\"git\\\" -type f 2>/dev/null\"}",
+    "{\"CommandLine\": \"find /work -name \\\".git\\\" 2>/dev/null; find / -name \\\".git\\\" 2>/dev/null\"}",
+    "e\": \"find /work -name \\\".git\\\" 2>/dev/null; find / -name \\\".git\\\" 2>/dev/null\"}"
+  ],
+  "usage": {
+    "input_tokens": 938533,
+    "output_tokens": 136610,
+    "thinking_tokens": 123463,
+    "cache_read_tokens": 18987872,
+    "total_tokens": 1075143
+  },
+  "web_denied": 1,
+  "agy_status": "SUCCESS",
+  "duration_s": 1563.596,
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-flash-vague-s1/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

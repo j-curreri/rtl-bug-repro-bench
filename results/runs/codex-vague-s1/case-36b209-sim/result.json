@@ -1,0 +1,33 @@
+{
+  "case": "cva6-99a0807757",
+  "anon_id": "case-36b209",
+  "condition": "sim",
+  "run_id": "codex-vague-s1",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 7,
+  "cost_usd": null,
+  "duration_s": 72.184,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work\\\"\", \"aggregated_output\": \"/work\\n/work/TASK.md\\n\"",
+    "cat TASK.md && rg --files -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' | head -80\\\"\", \"aggregated_output\": \"# Task: write a bu",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {},
+  "grade": {
+    "case": "cva6-99a0807757",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-vague-s1/case-36b209-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "case": "cva6-cc81a7bb49",
+  "anon_id": "case-5a937f",
+  "condition": "sim",
+  "run_id": "codex-xhigh-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "num_turns": 13,
+  "cost_usd": null,
+  "duration_s": 49.368,
+  "leak_hits": [
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n        riscv::CSR_MARCHID: csr_rdata = {{CVA6"
+  ],
+  "usage": {
+    "input_tokens": 176623,
+    "cached_input_tokens": 141056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1718,
+    "reasoning_output_tokens": 383
+  },
+  "grade": {
+    "case": "cva6-cc81a7bb49",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-xhigh-full-s1/case-5a937f-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

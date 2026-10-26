@@ -1,0 +1,38 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "luna-full-s2",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 13,
+  "cost_usd": null,
+  "duration_s": 198.246,
+  "leak_hits": [
+    "im/out && tail -40 sim/out/trace_hart_0.dasm 2>/dev/null && git status --short'\", \"aggregated_output\": \"total 6212\\n-rw-r--",
+    "    662833 0x34c D (0x00000013) DASM(0000/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 396311,
+    "cached_input_tokens": 366720,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7112,
+    "reasoning_output_tokens": 5361
+  },
+  "grade": {
+    "case": "cva6-18b9875e9d",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s2/case-90c6ff-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 127
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "case": "cva6-2d2d0c11b7",
+  "anon_id": "case-2696e8",
+  "condition": "sim",
+  "run_id": "luna-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 9,
+  "cost_usd": null,
+  "duration_s": 66.833,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "on\", \"command\": \"/bin/bash -lc \\\"sed -n '1,180p' repro.S && git status --short\\\"\", \"aggregated_output\": \"#include \\\"test.h\\",
+    "word 0x123456789abcdef0\\n\\n  HYP_TABLES\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 229864,
+    "cached_input_tokens": 207872,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3993,
+    "reasoning_output_tokens": 2640
+  },
+  "grade": {
+    "case": "cva6-2d2d0c11b7",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s3/case-2696e8-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

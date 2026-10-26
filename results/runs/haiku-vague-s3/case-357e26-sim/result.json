@@ -1,0 +1,31 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "haiku-vague-s3",
+  "backend": "claude",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.40338710000000005,
+  "duration_s": 724.016,
+  "leak_hits": [
+    "{\"command\": \"git -C /work status >/dev/null 2>&1; cat > /tmp/ptw.S <<'EOF'\\n"
+  ],
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/haiku-vague-s3/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "error",
+      "tohost": null,
+      "tail": "nation possible only by timeout or Ctrl-C!\n\n[2988] %Warning: ariane_testharness.sv:671: Assertion failed in TOP.ariane_testharness.p_assert: R Response Errored\n[3079] %Warning: ariane_testharness.sv:671: Assertion failed in TOP.ariane_testharness.p_assert: R Response Errored\nThis emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.\nListening on port 36661\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  bad syscall #1183637160854547\n"
+    },
+    "buggy": {
+      "outcome": "error",
+      "tohost": null,
+      "tail": "nation possible only by timeout or Ctrl-C!\n\n[2988] %Warning: ariane_testharness.sv:671: Assertion failed in TOP.ariane_testharness.p_assert: R Response Errored\n[3079] %Warning: ariane_testharness.sv:671: Assertion failed in TOP.ariane_testharness.p_assert: R Response Errored\nThis emulator compiled with JTAG Remote Bitbang client. To enable, use +jtag_rbb_enable=1.\nListening on port 41123\nterminate called after throwing an instance of 'std::runtime_error'\n  what():  bad syscall #1183637160854547\n"
+    },
+    "valid": false
+  }
+}

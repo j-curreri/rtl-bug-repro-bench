@@ -1,0 +1,42 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "luna-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 30,
+  "cost_usd": null,
+  "duration_s": 326.894,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "n hardware license in the context of the PULP platform\\n// (http://www.pulp-platform.org), under the copyright of ETH Zurich an",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; sed -n '1,220p' core/pmp/src/pmp.sv; sed -n",
+    "conf' core/pmp\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n// Copyright 2019 ETH Zurich and Univer",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {
+    "input_tokens": 1136058,
+    "cached_input_tokens": 1045888,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 21875,
+    "reasoning_output_tokens": 17759
+  },
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s2/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": false
+  }
+}

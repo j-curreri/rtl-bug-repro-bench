@@ -1,0 +1,22 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "codex-xhigh-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "num_turns": 6,
+  "cost_usd": null,
+  "duration_s": 81.667,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

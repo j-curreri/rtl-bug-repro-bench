@@ -1,0 +1,42 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "luna-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 26,
+  "cost_usd": null,
+  "duration_s": 143.967,
+  "leak_hits": [
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\ncore/csr_regfile.sv:691:        riscv::CSR_MAR",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; git diff -- core/csr_regfile.sv core/includ",
+    "execution\", \"command\": \"/bin/bash -lc \\\"git status --short; git diff -- core/csr_regfile.sv core/include/riscv_pkg.sv; rg -",
+    "_config_pkg.sv\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n/bin/bash: line 1: git: command not fou",
+    "in/bash: line 1: git: command not found\\n/bin/bash: line 1: git: command not found\\n28:  localparam CVA6ConfigHExtEn = 0;  ",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {
+    "input_tokens": 1477626,
+    "cached_input_tokens": 1399936,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9879,
+    "reasoning_output_tokens": 6307
+  },
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s1/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

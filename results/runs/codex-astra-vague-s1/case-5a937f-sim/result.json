@@ -1,0 +1,22 @@
+{
+  "case": "cva6-cc81a7bb49",
+  "anon_id": "case-5a937f",
+  "condition": "sim",
+  "run_id": "codex-astra-vague-s1",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 2,
+  "cost_usd": null,
+  "duration_s": 32.291,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work\\\"\", \"aggregated_output\": \"/work\\n/work/TASK.md\\n\""
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

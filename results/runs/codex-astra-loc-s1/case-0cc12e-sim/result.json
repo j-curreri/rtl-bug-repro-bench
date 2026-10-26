@@ -1,0 +1,40 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "codex-astra-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 15,
+  "cost_usd": null,
+  "duration_s": 149.399,
+  "leak_hits": [
+    "s -g TASK.md -g AGENTS.md -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work\\\"\", \"aggregated_output\": \"/work\\n/work/TASK.md\\n\"",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {
+    "input_tokens": 394233,
+    "cached_input_tokens": 354432,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1972,
+    "reasoning_output_tokens": 409
+  },
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-astra-loc-s1/case-0cc12e-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": true
+  }
+}

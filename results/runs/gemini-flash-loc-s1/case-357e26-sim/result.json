@@ -1,0 +1,30 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "gemini-flash-loc-s1",
+  "backend": "gemini",
+  "tier": "loc",
+  "agent_status": "wall timeout",
+  "model": "gemini-3.8-flash-high",
+  "effort": "high",
+  "agy_account": "agy-home",
+  "num_turns": 198,
+  "cost_usd": null,
+  "leak_hits": [
+    "{\"CommandLine\": \"git status; git log -n 5\"}",
+    "{\"CommandLine\": \"git status; git log -n 5\"}",
+    "{\"CommandLine\": \"which git || find / -name git 2>/dev/null\"}",
+    "{\"CommandLine\": \"which git || find / -name git 2>/dev/null\"}",
+    "{\"CommandLine\": \"find /work -name \\\".git*\\\"\"}"
+  ],
+  "usage": {},
+  "web_denied": 1,
+  "agy_status": null,
+  "duration_s": 2400.296,
+  "grade": {
+    "valid": false,
+    "error": "build failed",
+    "log": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-flash-loc-s1/case-357e26-sim/repro.S: Assembler messages:\n/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-flash-loc-s1/case-357e26-sim/repro.S:7: Error: illegal operands `li a0,(((a0)<<1)|1)'\nmake: *** [/mnt/k3/rtl-bug-repro-bench/harness/cva6/Makefile:11: build/repro.elf] Error 1\n"
+  }
+}

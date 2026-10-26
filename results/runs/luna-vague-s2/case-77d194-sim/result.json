@@ -1,0 +1,35 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "luna-vague-s2",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 27,
+  "cost_usd": null,
+  "duration_s": 166.758,
+  "leak_hits": [],
+  "usage": {
+    "input_tokens": 932730,
+    "cached_input_tokens": 886528,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 14877,
+    "reasoning_output_tokens": 11751
+  },
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s2/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "case": "cva6-194d39face",
+  "anon_id": "case-1ae444",
+  "condition": "sim",
+  "run_id": "luna-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 20,
+  "cost_usd": null,
+  "duration_s": 119.476,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; rg -n \\\\\\\"BUG|TODO|FIXME|wrong|incorrect\\\\\\",
+    "csr_regfile.sv\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n1565:        //TODO Hyp: implement hgei"
+  ],
+  "usage": {
+    "input_tokens": 750360,
+    "cached_input_tokens": 699264,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6537,
+    "reasoning_output_tokens": 4685
+  },
+  "grade": {
+    "case": "cva6-194d39face",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s1/case-1ae444-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

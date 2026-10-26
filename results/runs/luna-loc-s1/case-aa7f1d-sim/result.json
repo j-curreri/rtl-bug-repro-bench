@@ -1,0 +1,40 @@
+{
+  "case": "cva6-fc5fffba6f",
+  "anon_id": "case-aa7f1d",
+  "condition": "sim",
+  "run_id": "luna-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 10,
+  "cost_usd": null,
+  "duration_s": 66.453,
+  "leak_hits": [
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n691:        riscv::CSR_MARCHID: csr_rdata = {{",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short; rg -n \\\\\\\"HSTATUS_WRITE_MASK|SMODE_STATUS|H",
+    "W\\\\\\\" -g '*.S'\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\ncore/csr_regfile.sv:222:  localparam lo",
+    "h the License.  You may obtain a copy of the License at\\n * http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {
+    "input_tokens": 328775,
+    "cached_input_tokens": 299008,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3867,
+    "reasoning_output_tokens": 2611
+  },
+  "grade": {
+    "case": "cva6-fc5fffba6f",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s1/case-aa7f1d-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

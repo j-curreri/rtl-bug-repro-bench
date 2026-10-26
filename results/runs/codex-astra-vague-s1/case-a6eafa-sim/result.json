@@ -1,0 +1,26 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "sim",
+  "run_id": "codex-astra-vague-s1",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "num_turns": 2,
+  "cost_usd": null,
+  "duration_s": 27.036,
+  "leak_hits": [],
+  "usage": {
+    "input_tokens": 35715,
+    "cached_input_tokens": 29056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 370,
+    "reasoning_output_tokens": 193
+  },
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

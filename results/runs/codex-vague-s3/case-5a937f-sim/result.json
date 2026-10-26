@@ -1,0 +1,39 @@
+{
+  "case": "cva6-cc81a7bb49",
+  "anon_id": "case-5a937f",
+  "condition": "sim",
+  "run_id": "codex-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 11,
+  "cost_usd": null,
+  "duration_s": 84.821,
+  "leak_hits": [
+    "/AGENTS.md; do if [ -f \\\"$f\\\" ]; then cat \\\"$f\\\"; fi; done; git status --short'\", \"aggregated_output\": \"total 24\\ndrwxrwxr-",
+    "x 2 ubuntu ubuntu 4096 Oct 25 07:48 sim\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\"",
+    "scv::CSR_MVENDORID: csr_rdata = {{CVA6Cfg.XLEN - 32{1'b0}}, OPENHWGROUP_MVENDORID};\\n        riscv::CSR_MARCHID: csr_rdata = {{CVA6"
+  ],
+  "usage": {
+    "input_tokens": 161310,
+    "cached_input_tokens": 144128,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1550,
+    "reasoning_output_tokens": 366
+  },
+  "grade": {
+    "case": "cva6-cc81a7bb49",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-vague-s3/case-5a937f-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

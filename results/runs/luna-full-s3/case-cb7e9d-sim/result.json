@@ -1,0 +1,39 @@
+{
+  "case": "cva6-49b5fa9e2f",
+  "anon_id": "case-cb7e9d",
+  "condition": "sim",
+  "run_id": "luna-full-s3",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 9,
+  "cost_usd": null,
+  "duration_s": 75.066,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Munail Waqa",
+    "bash -lc \\\"sim/run.sh repro.S && sed -n '1,120p' repro.S && git status --short\\\"\", \"aggregated_output\": \"FAILED *** (tohost",
+    "\\n  mret\\nunexpected_trap:\\n  FAIL(127)\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 301410,
+    "cached_input_tokens": 268672,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3465,
+    "reasoning_output_tokens": 2156
+  },
+  "grade": {
+    "case": "cva6-49b5fa9e2f",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s3/case-cb7e9d-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

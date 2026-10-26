@@ -1,0 +1,42 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "luna-loc-s3",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 27,
+  "cost_usd": null,
+  "duration_s": 265.94,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "5\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short && git log --oneline -5 2>/dev/null || true ",
+    "xecution\", \"command\": \"/bin/bash -lc 'git status --short && git log --oneline -5 2>/dev/null || true && rg -n \\\"VIRTUAL|INS",
+    "ore | head -150'\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\ncore/cva6_rvfi.sv:598:    `CONNECT_RVFI",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {
+    "input_tokens": 1466369,
+    "cached_input_tokens": 1394816,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 17962,
+    "reasoning_output_tokens": 14714
+  },
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s3/case-0cc12e-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

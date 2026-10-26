@@ -1,0 +1,38 @@
+{
+  "case": "cva6-2a12275c11",
+  "anon_id": "case-b00ddd",
+  "condition": "sim",
+  "run_id": "luna-vague-s2",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 26,
+  "cost_usd": null,
+  "duration_s": 184.396,
+  "leak_hits": [
+    "1\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short && rg -n \\\"tval2|tinst|gva\\\" core/cva6_mmu c",
+    "/csr_regfile.sv'\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 712075,
+    "cached_input_tokens": 678912,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9757,
+    "reasoning_output_tokens": 6665
+  },
+  "grade": {
+    "case": "cva6-2a12275c11",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s2/case-b00ddd-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 3
+    },
+    "valid": false
+  }
+}

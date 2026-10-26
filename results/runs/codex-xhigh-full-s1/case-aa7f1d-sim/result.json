@@ -1,0 +1,22 @@
+{
+  "case": "cva6-fc5fffba6f",
+  "anon_id": "case-aa7f1d",
+  "condition": "sim",
+  "run_id": "codex-xhigh-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "num_turns": 4,
+  "cost_usd": null,
+  "duration_s": 32.425,
+  "leak_hits": [
+    " 'TASK.md' -g 'AGENTS.md' -g '\\\"'!node_modules'\\\"' -g '\\\"'!.git'\\\"' /work 2>/dev/null\\\"\", \"aggregated_output\": \"/work\\n/wor"
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

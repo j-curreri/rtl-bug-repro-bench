@@ -1,0 +1,40 @@
+{
+  "case": "cva6-49b5fa9e2f",
+  "anon_id": "case-cb7e9d",
+  "condition": "sim",
+  "run_id": "luna-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 14,
+  "cost_usd": null,
+  "duration_s": 88.529,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Munail Waqa",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "6\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short; nl -ba repro.S'\", \"aggregated_output\": \"/bi",
+    " nl -ba repro.S'\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n     1\\t#include \\\"test.h\\\"\\n     2\\t\\n"
+  ],
+  "usage": {
+    "input_tokens": 639957,
+    "cached_input_tokens": 598784,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5364,
+    "reasoning_output_tokens": 3529
+  },
+  "grade": {
+    "case": "cva6-49b5fa9e2f",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s2/case-cb7e9d-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": false
+  }
+}

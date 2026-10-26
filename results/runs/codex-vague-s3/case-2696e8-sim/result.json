@@ -1,0 +1,23 @@
+{
+  "case": "cva6-2d2d0c11b7",
+  "anon_id": "case-2696e8",
+  "condition": "sim",
+  "run_id": "codex-vague-s3",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 7,
+  "cost_usd": null,
+  "duration_s": 66.773,
+  "leak_hits": [
+    "d\": \"/bin/bash -lc 'ls -la; find .. -name AGENTS.md -print; git status --short'\", \"aggregated_output\": \"total 24\\ndrwxrwxr-",
+    "tc/ssl/private\\u2019: Permission denied\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

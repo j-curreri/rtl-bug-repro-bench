@@ -1,0 +1,39 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "luna-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 18,
+  "cost_usd": null,
+  "duration_s": 196.317,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "anch\\\" core/alu.sv core/alu_wrapper.sv core/branch_unit.sv; git status --short; cat harness/crt.S; cat harness/Makefile; ca",
+    "ta_i.operation)) && branch_comp_res_i);\\n/bin/bash: line 1: git: command not found\\n#include \\\"test.h\\\"\\n\\n  .section .text"
+  ],
+  "usage": {
+    "input_tokens": 565023,
+    "cached_input_tokens": 528000,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 12568,
+    "reasoning_output_tokens": 9793
+  },
+  "grade": {
+    "case": "cva6-0e04a86b13",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s1/case-0cc12e-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 10
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 10
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "haiku-vague-s1",
+  "backend": "claude",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.44640633,
+  "duration_s": 861.799,
+  "leak_hits": [
+    "{\"command\": \"cd /work/core; find . -type f | head -300; git -C /work status 2>&1 | head -2\", \"description\": \"List core "
+  ],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

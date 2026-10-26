@@ -1,0 +1,40 @@
+{
+  "case": "cva6-aef009c4b3",
+  "anon_id": "case-47f3d4",
+  "condition": "sim",
+  "run_id": "luna-full-s2",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 8,
+  "cost_usd": null,
+  "duration_s": 39.333,
+  "leak_hits": [
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "8\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short && git diff -- repro.S'\", \"aggregated_output",
+    "xecution\", \"command\": \"/bin/bash -lc 'git status --short && git diff -- repro.S'\", \"aggregated_output\": \"/bin/bash: line 1:",
+    "diff -- repro.S'\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 179018,
+    "cached_input_tokens": 161408,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1880,
+    "reasoning_output_tokens": 851
+  },
+  "grade": {
+    "case": "cva6-aef009c4b3",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s2/case-47f3d4-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

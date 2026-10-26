@@ -1,0 +1,41 @@
+{
+  "case": "cva6-18b9875e9d",
+  "anon_id": "case-90c6ff",
+  "condition": "sim",
+  "run_id": "luna-loc-s2",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 12,
+  "cost_usd": null,
+  "duration_s": 137.459,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "e/cva6.sv core/csr_regfile.sv core -g '*.sv' | head -140 && git status --short && git log -4 --oneline\\\"\", \"aggregated_outp",
+    "file.sv core -g '*.sv' | head -140 && git status --short && git log -4 --oneline\\\"\", \"aggregated_output\": \"#include \\\"test.",
+    "rent_instruction_is_hfence_gvma = 1'b0;\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 461512,
+    "cached_input_tokens": 414208,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10014,
+    "reasoning_output_tokens": 7964
+  },
+  "grade": {
+    "case": "cva6-18b9875e9d",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s2/case-90c6ff-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

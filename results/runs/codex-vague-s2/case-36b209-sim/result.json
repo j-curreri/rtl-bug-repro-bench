@@ -1,0 +1,25 @@
+{
+  "case": "cva6-99a0807757",
+  "anon_id": "case-36b209",
+  "condition": "sim",
+  "run_id": "codex-vague-s2",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exit 1",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 7,
+  "cost_usd": null,
+  "duration_s": 72.824,
+  "leak_hits": [
+    " -g '*instr*' -g '*decoder*' -g '*Makefile*' | head -100 && git status --short\\\"\", \"aggregated_output\": \"# Task: write a bu",
+    "ache_subsystem/hpdcache/rtl/tb/Makefile\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\"",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {},
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}

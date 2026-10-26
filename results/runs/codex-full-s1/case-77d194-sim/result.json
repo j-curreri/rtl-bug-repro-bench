@@ -1,0 +1,39 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "codex-full-s1",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "num_turns": 11,
+  "cost_usd": null,
+  "duration_s": 73.576,
+  "leak_hits": [
+    "e\": \"command_execution\", \"command\": \"/bin/bash -lc 'ls -la; git status --short; find .. -name AGENTS.md -print'\", \"aggregat",
+    "x 2 ubuntu ubuntu 4096 Oct 25 05:32 sim\\n/bin/bash: line 1: git: command not found\\nfind: \\u2018../root\\u2019: Permission d",
+    ".0 WITH SHL-2.0\\n// You may obtain a copy of the License at https://solderpad.org/licenses/\\n//\\n// Original Author: Jean-Roch C"
+  ],
+  "usage": {
+    "input_tokens": 207663,
+    "cached_input_tokens": 181888,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2016,
+    "reasoning_output_tokens": 711
+  },
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/codex-full-s1/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

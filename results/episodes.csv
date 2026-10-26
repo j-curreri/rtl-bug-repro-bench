@@ -1,4 +1,13 @@
 run,case,anon_id,model,backend,tier,condition,reproduced,fixed,buggy,grade_error,turns,duration_s,cost_usd,sandbox_flags,agent_status,void,excluded
+agy-opus-full-s1,cva6-2d2d0c11b7,case-2696e8,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,12,81.847,,0,exited,0,0
+agy-opus-full-s1,cva6-6fe7b95910,case-357e26,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,14,106.526,,0,exited,0,0
+agy-opus-full-s1,cva6-9a0e01e383,case-a6eafa,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,19,110.136,,0,exited,0,0
+agy-opus-full-s2,cva6-2d2d0c11b7,case-2696e8,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,16,97.131,,0,exited,0,0
+agy-opus-full-s2,cva6-6fe7b95910,case-357e26,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,17,95.245,,0,exited,0,0
+agy-opus-full-s2,cva6-9a0e01e383,case-a6eafa,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,11,82.681,,0,exited,0,0
+agy-opus-full-s3,cva6-2d2d0c11b7,case-2696e8,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,16,108.753,,0,exited,0,0
+agy-opus-full-s3,cva6-6fe7b95910,case-357e26,Opus 5.5 (Antigravity),gemini,full,sim,0,,,no repro.S,3,21.412,,0,exit 3,0,0
+agy-opus-full-s3,cva6-9a0e01e383,case-a6eafa,Opus 5.5 (Antigravity),gemini,full,sim,1,pass,fail,,10,72.69,,0,exited,0,0
 batch1,cva6-0e04a86b13,case-0cc12e,Sonnet 5.5,claude,full,nosim,1,pass,fail,,8,19.456,0.0742064,0,exited,0,0
 batch1,cva6-0e04a86b13,case-0cc12e,Sonnet 5.5,claude,full,sim,1,pass,fail,,13,156.553,0.12447900000000003,0,exited,0,0
 batch1,cva6-194d39face,case-1ae444,Sonnet 5.5,claude,full,nosim,1,pass,fail,,10,23.939,0.11885649999999998,0,exited,0,0
@@ -27,6 +36,247 @@ batch1,cva6-d2fdf99a38,case-b1ec9b,Sonnet 5.5,claude,full,nosim,1,pass,fail,,17,
 batch1,cva6-d2fdf99a38,case-b1ec9b,Sonnet 5.5,claude,full,sim,1,pass,fail,,11,82.729,0.1211644,0,exited,0,0
 batch1,cva6-49b5fa9e2f,case-cb7e9d,Sonnet 5.5,claude,full,nosim,1,pass,fail,,8,29.613,0.10454429999999999,0,exited,0,0
 batch1,cva6-49b5fa9e2f,case-cb7e9d,Sonnet 5.5,claude,full,sim,1,pass,fail,,9,66.643,0.097548,0,exited,0,0
+codex-astra-full-s1,cva6-0e04a86b13,case-0cc12e,GPT-6 Astra,codex,full,sim,1,pass,fail,,8,86.41,,0,exited,0,0
+codex-astra-full-s1,cva6-194d39face,case-1ae444,GPT-6 Astra,codex,full,sim,1,pass,fail,,10,92.841,,0,exited,0,0
+codex-astra-full-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6 Astra,codex,full,sim,0,,,no repro.S,2,24.093,,0,exited,0,0
+codex-astra-full-s1,cva6-6fe7b95910,case-357e26,GPT-6 Astra,codex,full,sim,0,,,no repro.S,2,27.792,,0,exit 1,0,0
+codex-astra-full-s1,cva6-99a0807757,case-36b209,GPT-6 Astra,codex,full,sim,1,pass,fail,,8,113.372,,0,exit 1,0,0
+codex-astra-full-s1,cva6-aef009c4b3,case-47f3d4,GPT-6 Astra,codex,full,sim,1,pass,fail,,10,56.864,,1,exited,0,0
+codex-astra-full-s1,cva6-cc81a7bb49,case-5a937f,GPT-6 Astra,codex,full,sim,1,pass,fail,,8,82.973,,1,exited,0,0
+codex-astra-full-s1,cva6-81245a47fa,case-77d194,GPT-6 Astra,codex,full,sim,1,pass,fail,,7,97.631,,0,exited,0,0
+codex-astra-full-s1,cva6-18b9875e9d,case-90c6ff,GPT-6 Astra,codex,full,sim,0,,,no repro.S,4,49.781,,1,exit 1,0,0
+codex-astra-full-s1,cva6-9a0e01e383,case-a6eafa,GPT-6 Astra,codex,full,sim,0,,,no repro.S,2,24.632,,0,exit 1,0,0
+codex-astra-full-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Astra,codex,full,sim,0,,,no repro.S,2,36.537,,0,exit 1,0,0
+codex-astra-full-s1,cva6-2a12275c11,case-b00ddd,GPT-6 Astra,codex,full,sim,0,,,no repro.S,2,23.501,,0,exit 1,0,0
+codex-astra-full-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Astra,codex,full,sim,0,,,no repro.S,5,79.256,,0,exit 1,0,0
+codex-astra-full-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Astra,codex,full,sim,0,,,no repro.S,3,27.009,,0,exit 1,0,0
+codex-astra-loc-s1,cva6-0e04a86b13,case-0cc12e,GPT-6 Astra,codex,loc,sim,1,pass,fail,,15,149.399,,4,exited,0,0
+codex-astra-loc-s1,cva6-194d39face,case-1ae444,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,8,139.174,,3,exit 1,0,0
+codex-astra-loc-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,24.485,,1,exit 1,0,0
+codex-astra-loc-s1,cva6-6fe7b95910,case-357e26,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,23.467,,0,exit 1,0,0
+codex-astra-loc-s1,cva6-99a0807757,case-36b209,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,23.218,,0,exit 1,0,0
+codex-astra-loc-s1,cva6-aef009c4b3,case-47f3d4,GPT-6 Astra,codex,loc,sim,1,pass,fail,,12,168.04,,5,exited,0,0
+codex-astra-loc-s1,cva6-cc81a7bb49,case-5a937f,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,25.641,,1,exit 1,0,0
+codex-astra-loc-s1,cva6-81245a47fa,case-77d194,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,30.297,,1,exit 1,0,0
+codex-astra-loc-s1,cva6-18b9875e9d,case-90c6ff,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,33.272,,0,exit 1,0,0
+codex-astra-loc-s1,cva6-9a0e01e383,case-a6eafa,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,20.872,,1,exit 1,0,0
+codex-astra-loc-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,22.509,,0,exit 1,0,0
+codex-astra-loc-s1,cva6-2a12275c11,case-b00ddd,GPT-6 Astra,codex,loc,sim,1,pass,fail,,8,124.06,,2,exit 1,0,0
+codex-astra-loc-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,25.789,,0,exit 1,0,0
+codex-astra-loc-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Astra,codex,loc,sim,0,,,no repro.S,2,24.836,,1,exit 1,0,0
+codex-astra-vague-s1,cva6-0e04a86b13,case-0cc12e,GPT-6 Astra,codex,vague,sim,1,pass,fail,,9,111.115,,1,exit 1,0,0
+codex-astra-vague-s1,cva6-194d39face,case-1ae444,GPT-6 Astra,codex,vague,sim,1,pass,fail,,11,126.799,,1,exited,0,0
+codex-astra-vague-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,2,25.327,,0,exit 1,0,0
+codex-astra-vague-s1,cva6-6fe7b95910,case-357e26,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,2,26.027,,0,exit 1,0,0
+codex-astra-vague-s1,cva6-99a0807757,case-36b209,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,5,103.969,,0,exit 1,0,0
+codex-astra-vague-s1,cva6-aef009c4b3,case-47f3d4,GPT-6 Astra,codex,vague,sim,1,pass,fail,,8,105.037,,2,exited,0,0
+codex-astra-vague-s1,cva6-cc81a7bb49,case-5a937f,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,2,32.291,,1,exit 1,0,0
+codex-astra-vague-s1,cva6-81245a47fa,case-77d194,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,2,21.965,,1,exit 1,0,0
+codex-astra-vague-s1,cva6-18b9875e9d,case-90c6ff,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,4,126.914,,1,exit 1,0,0
+codex-astra-vague-s1,cva6-9a0e01e383,case-a6eafa,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,2,27.036,,0,exited,0,0
+codex-astra-vague-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Astra,codex,vague,sim,1,pass,fail,,12,137.856,,0,exit 1,0,0
+codex-astra-vague-s1,cva6-2a12275c11,case-b00ddd,GPT-6 Astra,codex,vague,sim,0,pass,pass,,11,168.646,,1,exit 1,0,0
+codex-astra-vague-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Astra,codex,vague,sim,1,pass,fail,,10,140.537,,0,exited,0,0
+codex-astra-vague-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Astra,codex,vague,sim,0,,,no repro.S,8,116.287,,1,exit 1,0,0
+codex-full-s1,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,13,60.887,,1,exited,0,0
+codex-full-s1,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,16,85.736,,0,exited,0,0
+codex-full-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,7,65.19,,0,exit 1,0,0
+codex-full-s1,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,4,53.336,,2,exit 1,0,0
+codex-full-s1,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,5,47.816,,1,exit 1,0,0
+codex-full-s1,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,9,54.132,,0,exited,0,0
+codex-full-s1,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,8,53.078,,1,exited,0,0
+codex-full-s1,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,11,73.576,,3,exited,0,0
+codex-full-s1,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,8,67.361,,1,exit 1,0,0
+codex-full-s1,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,3,17.531,,1,exit 1,0,0
+codex-full-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,4,26.405,,0,exit 1,0,0
+codex-full-s1,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,7,72.395,,2,exit 1,0,0
+codex-full-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,7,76.736,,2,exit 1,0,0
+codex-full-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,15,100.61,,0,exit 1,0,0
+codex-full-s2,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,11,81.63,,1,exited,0,0
+codex-full-s2,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,9,88.091,,2,exit 1,0,0
+codex-full-s2,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,9,67.469,,0,exit 1,0,0
+codex-full-s2,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,5,67.118,,4,exit 1,0,0
+codex-full-s2,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,8,53.128,,0,exit 1,0,0
+codex-full-s2,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,9,37.653,,0,exited,0,0
+codex-full-s2,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,10,44.803,,2,exited,0,0
+codex-full-s2,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,10,94.396,,1,exit 1,0,0
+codex-full-s2,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,8,71.46,,1,exit 1,0,0
+codex-full-s2,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,5,92.391,,0,exit 1,0,0
+codex-full-s2,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,6,52.691,,1,exit 1,0,0
+codex-full-s2,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,6,71.676,,2,exit 1,0,0
+codex-full-s2,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,16,126.449,,1,exited,0,0
+codex-full-s2,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,20,146.532,,0,exit 1,0,0
+codex-full-s3,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,11,72.639,,1,exited,0,0
+codex-full-s3,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,17,97.111,,1,exit 1,0,0
+codex-full-s3,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,8,68.925,,0,exit 1,0,0
+codex-full-s3,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,5,72.706,,2,exit 1,0,0
+codex-full-s3,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,5,34.788,,0,exit 1,0,0
+codex-full-s3,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,9,50.197,,1,exited,0,0
+codex-full-s3,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,10,71.691,,1,exited,0,0
+codex-full-s3,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,13,91.581,,1,exited,0,0
+codex-full-s3,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,5,67.199,,0,exit 1,0,0
+codex-full-s3,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,full,sim,0,,,no repro.S,9,78.392,,0,exit 1,0,0
+codex-full-s3,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,11,114.976,,0,exit 1,0,0
+codex-full-s3,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,7,81.9,,1,exit 1,0,0
+codex-full-s3,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,9,119.047,,1,exited,0,0
+codex-full-s3,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,12,164.264,,0,exit 1,0,0
+codex-loc-s1,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,loc,sim,0,pass,pass,,13,184.597,,6,exit 1,0,0
+codex-loc-s1,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,9,52.5,,3,exit 1,0,0
+codex-loc-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,6,26.055,,1,exit 1,0,0
+codex-loc-s1,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,8,62.007,,2,exit 1,0,0
+codex-loc-s1,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,7,96.172,,3,exit 1,0,0
+codex-loc-s1,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,15,109.101,,4,exited,0,0
+codex-loc-s1,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,10,91.463,,3,exit 1,0,0
+codex-loc-s1,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,11,74.676,,3,exit 1,0,0
+codex-loc-s1,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,11,191.001,,5,exit 1,0,0
+codex-loc-s1,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,7,99.546,,1,exit 1,0,0
+codex-loc-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,loc,sim,0,fail,fail,,9,57.032,,6,exit 1,0,0
+codex-loc-s1,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,10,78.763,,3,exit 1,0,0
+codex-loc-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,12,97.933,,3,exit 1,0,0
+codex-loc-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,6,71.729,,1,exit 1,0,0
+codex-loc-s2,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,19,230.754,,3,exit 1,0,0
+codex-loc-s2,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,loc,sim,0,fail,fail,,21,231.888,,4,exited,0,0
+codex-loc-s2,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,6,27.705,,1,exit 1,0,0
+codex-loc-s2,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,9,75.992,,3,exit 1,0,0
+codex-loc-s2,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,7,89.109,,2,exit 1,0,0
+codex-loc-s2,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,loc,sim,0,fail,fail,,19,200.142,,5,exit 1,0,0
+codex-loc-s2,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,loc,sim,0,fail,fail,,17,130.594,,3,exit 1,0,0
+codex-loc-s2,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,11,79.476,,4,exit 1,0,0
+codex-loc-s2,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,9,167.416,,3,exit 1,0,0
+codex-loc-s2,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,8,64.415,,2,exit 1,0,0
+codex-loc-s2,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,9,95.89,,3,exit 1,0,0
+codex-loc-s2,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,13,88.533,,2,exited,0,0
+codex-loc-s2,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,6,75.31,,4,exit 1,0,0
+codex-loc-s2,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,8,85.829,,1,exit 1,0,0
+codex-loc-s3,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,14,229.57,,3,exited,0,0
+codex-loc-s3,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,10,158.201,,3,exit 1,0,0
+codex-loc-s3,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,3,23.236,,1,exit 1,0,0
+codex-loc-s3,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,8,76.481,,5,exit 1,0,0
+codex-loc-s3,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,7,83.169,,2,exit 1,0,0
+codex-loc-s3,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,24,374.1,,7,exited,0,0
+codex-loc-s3,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,loc,sim,0,pass,pass,,12,95.909,,3,exit 1,0,0
+codex-loc-s3,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,8,39.422,,3,exit 1,0,0
+codex-loc-s3,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,10,142.356,,3,exit 1,0,0
+codex-loc-s3,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,10,115.112,,2,exit 1,0,0
+codex-loc-s3,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,9,76.763,,4,exit 1,0,0
+codex-loc-s3,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,14,150.0,,2,exited,0,0
+codex-loc-s3,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,loc,sim,0,,,no repro.S,6,90.349,,3,exit 1,0,0
+codex-loc-s3,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,loc,sim,1,pass,fail,,13,118.925,,1,exit 1,0,0
+codex-smoke,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,full,sim,1,pass,fail,,9,62.688,,1,exited,0,1
+codex-vague-s1,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,20,117.818,,4,exited,0,0
+codex-vague-s1,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,10,58.165,,2,exit 1,0,0
+codex-vague-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,30.279,,2,exit 1,0,0
+codex-vague-s1,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,36.289,,3,exit 1,0,0
+codex-vague-s1,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,vague,sim,0,fail,fail,,7,72.184,,3,exit 1,0,0
+codex-vague-s1,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,8,76.174,,1,exited,0,0
+codex-vague-s1,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,11,56.69,,2,exited,0,0
+codex-vague-s1,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,10,150.914,,2,exit 1,0,0
+codex-vague-s1,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,11,80.4,,2,exit 1,0,0
+codex-vague-s1,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,67.464,,3,exit 1,0,0
+codex-vague-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,48.884,,0,exit 1,0,0
+codex-vague-s1,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,9,72.988,,3,exit 1,0,0
+codex-vague-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,9,78.582,,1,exited,0,0
+codex-vague-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,72.725,,1,exit 1,0,0
+codex-vague-s2,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,13,82.876,,1,exited,0,0
+codex-vague-s2,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,14,105.966,,1,exit 1,0,0
+codex-vague-s2,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,72.393,,2,exit 1,0,0
+codex-vague-s2,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,8,91.942,,3,exit 1,0,0
+codex-vague-s2,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,7,72.824,,4,exit 1,0,0
+codex-vague-s2,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,12,78.177,,1,exited,0,0
+codex-vague-s2,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,12,82.247,,2,exited,0,0
+codex-vague-s2,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,vague,sim,0,fail,fail,,10,202.554,,2,exit 1,0,0
+codex-vague-s2,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,83.36,,2,exit 1,0,0
+codex-vague-s2,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,51.972,,1,exit 1,0,0
+codex-vague-s2,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,48.387,,1,exit 1,0,0
+codex-vague-s2,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,vague,sim,0,fail,fail,,12,197.873,,1,exit 1,0,0
+codex-vague-s2,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,52.636,,1,exit 1,0,0
+codex-vague-s2,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,41.233,,2,exit 1,0,0
+codex-vague-s3,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,15,89.37,,0,exited,0,0
+codex-vague-s3,cva6-194d39face,case-1ae444,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,9,65.625,,1,exit 1,0,0
+codex-vague-s3,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,7,66.773,,2,exit 1,0,0
+codex-vague-s3,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,79.045,,3,exit 1,0,0
+codex-vague-s3,cva6-99a0807757,case-36b209,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,10,67.579,,0,exit 1,0,0
+codex-vague-s3,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,11,79.77,,1,exited,0,0
+codex-vague-s3,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,11,84.821,,3,exited,0,0
+codex-vague-s3,cva6-81245a47fa,case-77d194,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,13,130.745,,1,exited,0,0
+codex-vague-s3,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,68.727,,1,exit 1,0,0
+codex-vague-s3,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,6,57.645,,1,exit 1,0,0
+codex-vague-s3,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,10,61.671,,0,exit 1,0,0
+codex-vague-s3,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol,codex,vague,sim,0,pass,pass,,15,83.809,,1,exit 1,0,0
+codex-vague-s3,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol,codex,vague,sim,1,pass,fail,,10,98.712,,4,exited,0,0
+codex-vague-s3,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol,codex,vague,sim,0,,,no repro.S,5,53.79,,2,exit 1,0,0
+codex-xhigh-full-s1,cva6-0e04a86b13,case-0cc12e,GPT-6.1 Sol (effort xhigh),codex,full,sim,1,pass,fail,,12,81.554,,2,exited,0,0
+codex-xhigh-full-s1,cva6-194d39face,case-1ae444,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,9,55.659,,2,exit 1,0,0
+codex-xhigh-full-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,2,27.062,,0,exit 1,0,0
+codex-xhigh-full-s1,cva6-6fe7b95910,case-357e26,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,6,68.337,,2,exit 1,0,0
+codex-xhigh-full-s1,cva6-99a0807757,case-36b209,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,6,79.812,,2,exit 1,0,0
+codex-xhigh-full-s1,cva6-aef009c4b3,case-47f3d4,GPT-6.1 Sol (effort xhigh),codex,full,sim,1,pass,fail,,13,50.669,,1,exited,0,0
+codex-xhigh-full-s1,cva6-cc81a7bb49,case-5a937f,GPT-6.1 Sol (effort xhigh),codex,full,sim,1,pass,fail,,13,49.368,,1,exited,0,0
+codex-xhigh-full-s1,cva6-81245a47fa,case-77d194,GPT-6.1 Sol (effort xhigh),codex,full,sim,1,pass,fail,,8,75.331,,1,exit 1,0,0
+codex-xhigh-full-s1,cva6-18b9875e9d,case-90c6ff,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,6,81.667,,1,exit 1,0,0
+codex-xhigh-full-s1,cva6-9a0e01e383,case-a6eafa,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,6,82.441,,1,exit 1,0,0
+codex-xhigh-full-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,4,32.425,,1,exit 1,0,0
+codex-xhigh-full-s1,cva6-2a12275c11,case-b00ddd,GPT-6.1 Sol (effort xhigh),codex,full,sim,1,pass,fail,,15,103.102,,2,exited,0,0
+codex-xhigh-full-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6.1 Sol (effort xhigh),codex,full,sim,0,,,no repro.S,2,15.976,,2,exit 1,0,0
+codex-xhigh-full-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6.1 Sol (effort xhigh),codex,full,sim,1,pass,fail,,18,127.63,,0,exit 1,0,0
+gemini-argon-full-s1,cva6-0e04a86b13,case-0cc12e,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,42,611.799,,2,exited,0,0
+gemini-argon-full-s1,cva6-194d39face,case-1ae444,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,51,467.888,,0,exited,0,0
+gemini-argon-full-s1,cva6-2d2d0c11b7,case-2696e8,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,60,760.677,,1,exited,0,0
+gemini-argon-full-s1,cva6-6fe7b95910,case-357e26,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,46,1428.168,,0,exited,0,0
+gemini-argon-full-s1,cva6-99a0807757,case-36b209,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,40,522.784,,1,exited,0,0
+gemini-argon-full-s1,cva6-aef009c4b3,case-47f3d4,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,34,265.566,,0,exited,0,0
+gemini-argon-full-s1,cva6-cc81a7bb49,case-5a937f,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,36,376.493,,0,exited,0,0
+gemini-argon-full-s1,cva6-81245a47fa,case-77d194,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,32,627.138,,0,exited,0,0
+gemini-argon-full-s1,cva6-18b9875e9d,case-90c6ff,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,53,674.277,,0,exited,0,0
+gemini-argon-full-s1,cva6-9a0e01e383,case-a6eafa,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,42,681.945,,0,exited,0,0
+gemini-argon-full-s1,cva6-fc5fffba6f,case-aa7f1d,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,41,400.713,,1,exited,0,0
+gemini-argon-full-s1,cva6-2a12275c11,case-b00ddd,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,60,646.811,,0,exited,0,0
+gemini-argon-full-s1,cva6-d2fdf99a38,case-b1ec9b,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,35,591.241,,0,exited,0,0
+gemini-argon-full-s1,cva6-49b5fa9e2f,case-cb7e9d,Gemini 4 Argon,gemini,full,sim,1,pass,fail,,43,739.996,,1,exited,0,0
+gemini-flash-full-s1,cva6-0e04a86b13,case-0cc12e,Gemini 3.8 Flash,gemini,full,sim,0,fail,fail,,103,1005.088,,2,exited,0,0
+gemini-flash-full-s1,cva6-194d39face,case-1ae444,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,69,520.759,,1,exited,0,0
+gemini-flash-full-s1,cva6-2d2d0c11b7,case-2696e8,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,84,757.145,,3,exited,0,0
+gemini-flash-full-s1,cva6-6fe7b95910,case-357e26,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,72,780.741,,1,exited,0,0
+gemini-flash-full-s1,cva6-99a0807757,case-36b209,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,64,647.752,,1,exited,0,0
+gemini-flash-full-s1,cva6-aef009c4b3,case-47f3d4,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,47,354.075,,1,exited,0,0
+gemini-flash-full-s1,cva6-cc81a7bb49,case-5a937f,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,75,574.128,,2,exited,0,0
+gemini-flash-full-s1,cva6-81245a47fa,case-77d194,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,59,610.242,,2,exited,0,0
+gemini-flash-full-s1,cva6-18b9875e9d,case-90c6ff,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,86,764.841,,2,exited,0,0
+gemini-flash-full-s1,cva6-9a0e01e383,case-a6eafa,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,69,545.925,,1,exited,0,0
+gemini-flash-full-s1,cva6-fc5fffba6f,case-aa7f1d,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,72,544.533,,1,exited,0,0
+gemini-flash-full-s1,cva6-2a12275c11,case-b00ddd,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,128,833.993,,1,exited,0,0
+gemini-flash-full-s1,cva6-d2fdf99a38,case-b1ec9b,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,72,630.383,,1,exited,0,0
+gemini-flash-full-s1,cva6-49b5fa9e2f,case-cb7e9d,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,70,587.642,,1,exited,0,0
+gemini-flash-loc-s1,cva6-0e04a86b13,case-0cc12e,Gemini 3.8 Flash,gemini,loc,sim,1,pass,fail,,231,1988.55,,9,exited,0,0
+gemini-flash-loc-s1,cva6-194d39face,case-1ae444,Gemini 3.8 Flash,gemini,loc,sim,0,fail,fail,,245,2155.431,,11,exited,0,0
+gemini-flash-loc-s1,cva6-2d2d0c11b7,case-2696e8,Gemini 3.8 Flash,gemini,loc,sim,0,fail,fail,,79,669.584,,3,exited,0,0
+gemini-flash-loc-s1,cva6-6fe7b95910,case-357e26,Gemini 3.8 Flash,gemini,loc,sim,0,,,build failed,198,2400.296,,5,wall timeout,0,0
+gemini-flash-loc-s1,cva6-99a0807757,case-36b209,Gemini 3.8 Flash,gemini,loc,sim,0,pass,pass,,189,2400.288,,6,wall timeout,0,0
+gemini-flash-loc-s1,cva6-aef009c4b3,case-47f3d4,Gemini 3.8 Flash,gemini,loc,sim,1,pass,fail,,266,2400.276,,10,wall timeout,0,0
+gemini-flash-loc-s1,cva6-cc81a7bb49,case-5a937f,Gemini 3.8 Flash,gemini,loc,sim,0,,,no repro.S,255,2400.307,,9,wall timeout,0,0
+gemini-flash-loc-s1,cva6-81245a47fa,case-77d194,Gemini 3.8 Flash,gemini,loc,sim,0,fail,fail,,112,840.97,,5,exited,0,0
+gemini-flash-loc-s1,cva6-18b9875e9d,case-90c6ff,Gemini 3.8 Flash,gemini,loc,sim,1,pass,fail,,175,2078.352,,6,exited,0,0
+gemini-flash-loc-s1,cva6-9a0e01e383,case-a6eafa,Gemini 3.8 Flash,gemini,loc,sim,0,pass,pass,,155,2400.303,,5,wall timeout,0,0
+gemini-flash-loc-s1,cva6-fc5fffba6f,case-aa7f1d,Gemini 3.8 Flash,gemini,loc,sim,0,fail,fail,,178,2221.564,,4,exited,0,0
+gemini-flash-loc-s1,cva6-2a12275c11,case-b00ddd,Gemini 3.8 Flash,gemini,loc,sim,1,pass,fail,,87,550.341,,2,exited,0,0
+gemini-flash-loc-s1,cva6-d2fdf99a38,case-b1ec9b,Gemini 3.8 Flash,gemini,loc,sim,1,pass,fail,,137,1044.629,,2,exited,0,0
+gemini-flash-loc-s1,cva6-49b5fa9e2f,case-cb7e9d,Gemini 3.8 Flash,gemini,loc,sim,0,timeout,fail,,68,842.412,,3,exited,0,0
+gemini-flash-vague-s1,cva6-0e04a86b13,case-0cc12e,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,98,778.255,,3,exited,0,0
+gemini-flash-vague-s1,cva6-194d39face,case-1ae444,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,78,793.213,,3,exited,0,0
+gemini-flash-vague-s1,cva6-2d2d0c11b7,case-2696e8,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,109,805.419,,2,exited,0,0
+gemini-flash-vague-s1,cva6-6fe7b95910,case-357e26,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,160,1563.596,,8,exited,0,0
+gemini-flash-vague-s1,cva6-99a0807757,case-36b209,Gemini 3.8 Flash,gemini,vague,sim,0,fail,fail,,115,1045.727,,3,exited,0,0
+gemini-flash-vague-s1,cva6-aef009c4b3,case-47f3d4,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,81,611.873,,3,exited,0,0
+gemini-flash-vague-s1,cva6-cc81a7bb49,case-5a937f,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,62,592.272,,2,exited,0,0
+gemini-flash-vague-s1,cva6-81245a47fa,case-77d194,Gemini 3.8 Flash,gemini,vague,sim,0,fail,fail,,138,2045.65,,6,exited,0,0
+gemini-flash-vague-s1,cva6-18b9875e9d,case-90c6ff,Gemini 3.8 Flash,gemini,vague,sim,0,,,no repro.S,236,2400.292,,6,wall timeout,0,0
+gemini-flash-vague-s1,cva6-9a0e01e383,case-a6eafa,Gemini 3.8 Flash,gemini,vague,sim,0,fail,fail,,130,1829.569,,2,exited,0,0
+gemini-flash-vague-s1,cva6-fc5fffba6f,case-aa7f1d,Gemini 3.8 Flash,gemini,vague,sim,0,fail,fail,,98,970.658,,4,exited,0,0
+gemini-flash-vague-s1,cva6-2a12275c11,case-b00ddd,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,185,1682.758,,4,exited,0,0
+gemini-flash-vague-s1,cva6-d2fdf99a38,case-b1ec9b,Gemini 3.8 Flash,gemini,vague,sim,1,pass,fail,,63,561.772,,2,exited,0,0
+gemini-flash-vague-s1,cva6-49b5fa9e2f,case-cb7e9d,Gemini 3.8 Flash,gemini,vague,sim,0,timeout,fail,,109,1207.844,,4,exited,0,0
+gemini-smoke,cva6-0e04a86b13,case-0cc12e,Gemini 3.8 Flash,gemini,full,sim,0,pass,pass,,25,1942.309,,2,exited,0,1
+gemini2-smoke,cva6-2a12275c11,case-b00ddd,Gemini 3.8 Flash,gemini,full,sim,1,pass,fail,,60,478.052,,1,exited,0,1
 glm-d6-s1,cva6-81245a47fa,case-77d194,GLM 5.3 Flash,glm,loc,sim,0,fail,fail,,95,9013.367,24.350051999999998,0,exited,0,1
 glm-d6-s10,cva6-81245a47fa,case-77d194,GLM 5.3 Flash,glm,loc,sim,0,fail,fail,,109,15368.665,34.47715199999999,0,exited,0,1
 glm-d6-s2,cva6-81245a47fa,case-77d194,GLM 5.3 Flash,glm,loc,sim,0,fail,fail,,86,10443.039,25.971268000000016,0,exited,0,1
@@ -94,6 +344,264 @@ granite1,cva6-d2fdf99a38,case-b1ec9b,Granite 4.2 8B,granite,full,nosim,0,,,build
 granite1,cva6-d2fdf99a38,case-b1ec9b,Granite 4.2 8B,granite,full,sim,0,,,build failed,20,980.023,3.671812,0,exited,0,0
 granite1,cva6-49b5fa9e2f,case-cb7e9d,Granite 4.2 8B,granite,full,nosim,0,,,no repro.S,14,2222.527,3.7024839999999997,0,exit 1,0,0
 granite1,cva6-49b5fa9e2f,case-cb7e9d,Granite 4.2 8B,granite,full,sim,0,,,no repro.S,18,1058.889,3.318056,0,exit 1,0,0
+haiku-full-s1,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,full,sim,0,fail,fail,,14,133.945,0.016582540000000003,0,exited,0,0
+haiku-full-s1,cva6-194d39face,case-1ae444,Haiku 5.5,claude,full,sim,1,pass,fail,,14,54.187,0.013829850000000001,0,exited,0,0
+haiku-full-s1,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,full,sim,1,pass,fail,,12,86.174,0.011673900000000001,0,exited,0,0
+haiku-full-s1,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,full,sim,1,pass,fail,,13,77.491,0.01467281,0,exited,0,0
+haiku-full-s1,cva6-99a0807757,case-36b209,Haiku 5.5,claude,full,sim,1,pass,fail,,12,97.25,0.01634022,0,exited,0,0
+haiku-full-s1,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,full,sim,1,pass,fail,,6,31.928,0.0051896600000000005,0,exited,0,0
+haiku-full-s1,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,full,sim,1,pass,fail,,9,71.103,0.00632073,0,exited,0,0
+haiku-full-s1,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,full,sim,1,pass,fail,,10,63.245,0.00861811,0,exited,0,0
+haiku-full-s1,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,full,sim,1,pass,fail,,16,105.005,0.016215030000000002,0,exited,0,0
+haiku-full-s1,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,full,sim,1,pass,fail,,10,102.911,0.014756110000000001,0,exited,0,0
+haiku-full-s1,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,full,sim,1,pass,fail,,8,34.762,0.0054342900000000005,0,exited,0,0
+haiku-full-s1,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,full,sim,1,pass,fail,,12,77.469,0.010594210000000001,0,exited,0,0
+haiku-full-s1,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,full,sim,1,pass,fail,,19,150.607,0.020245230000000003,0,exited,0,0
+haiku-full-s1,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,full,sim,1,pass,fail,,16,153.211,0.02223771,1,exited,0,0
+haiku-full-s2,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,full,sim,0,fail,fail,,9,45.318,0.007413650000000001,0,exited,0,0
+haiku-full-s2,cva6-194d39face,case-1ae444,Haiku 5.5,claude,full,sim,1,pass,fail,,12,59.494,0.00956235,0,exited,0,0
+haiku-full-s2,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,full,sim,1,pass,fail,,11,69.385,0.01266444,0,exited,0,0
+haiku-full-s2,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,full,sim,1,pass,fail,,16,105.946,0.01656924,0,exited,0,0
+haiku-full-s2,cva6-99a0807757,case-36b209,Haiku 5.5,claude,full,sim,1,pass,fail,,14,91.266,0.015393680000000002,0,exited,0,0
+haiku-full-s2,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,full,sim,1,pass,fail,,7,82.513,0.0046949900000000004,0,exited,0,0
+haiku-full-s2,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,full,sim,1,pass,fail,,12,97.096,0.008677309999999999,0,exited,0,0
+haiku-full-s2,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,full,sim,1,pass,fail,,12,54.197,0.009571850000000002,0,exited,0,0
+haiku-full-s2,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,full,sim,0,fail,fail,,12,75.684,0.011152910000000002,0,exited,0,0
+haiku-full-s2,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,full,sim,1,pass,fail,,10,88.99,0.014057280000000002,0,exited,0,0
+haiku-full-s2,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,full,sim,1,pass,fail,,18,117.021,0.01736777,0,exited,0,0
+haiku-full-s2,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,full,sim,1,pass,fail,,16,61.45,0.01192285,0,exited,0,0
+haiku-full-s2,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,full,sim,1,pass,fail,,16,152.028,0.01936563,0,exited,0,0
+haiku-full-s2,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,full,sim,1,pass,fail,,20,264.871,0.02161965,0,exited,0,0
+haiku-full-s3,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,full,sim,0,fail,fail,,10,50.099,0.00861715,1,exited,0,0
+haiku-full-s3,cva6-194d39face,case-1ae444,Haiku 5.5,claude,full,sim,1,pass,fail,,11,41.458,0.007244310000000001,0,exited,0,0
+haiku-full-s3,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,full,sim,1,pass,fail,,11,72.075,0.01364307,0,exited,0,0
+haiku-full-s3,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,full,sim,1,pass,fail,,13,63.401,0.011547690000000001,0,exited,0,0
+haiku-full-s3,cva6-99a0807757,case-36b209,Haiku 5.5,claude,full,sim,1,pass,fail,,15,100.405,0.01566031,0,exited,0,0
+haiku-full-s3,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,full,sim,1,pass,fail,,6,29.145,0.00321083,0,exited,0,0
+haiku-full-s3,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,full,sim,1,pass,fail,,7,33.694,0.00450685,0,exited,0,0
+haiku-full-s3,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,full,sim,1,pass,fail,,10,39.134,0.00725995,0,exited,0,0
+haiku-full-s3,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,full,sim,1,pass,fail,,21,243.567,0.030748690000000002,0,exited,0,0
+haiku-full-s3,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,full,sim,1,pass,fail,,11,82.654,0.013636679999999998,0,exited,0,0
+haiku-full-s3,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,full,sim,1,pass,fail,,10,44.798,0.0077478600000000005,0,exited,0,0
+haiku-full-s3,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,full,sim,1,pass,fail,,9,42.439,0.007602610000000001,0,exited,0,0
+haiku-full-s3,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,full,sim,1,pass,fail,,18,144.729,0.019621080000000003,0,exited,0,0
+haiku-full-s3,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,full,sim,1,pass,fail,,16,345.747,0.021009040000000003,0,exited,0,0
+haiku-loc-s1,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,loc,sim,0,,,no repro.S,61,685.651,0.24762452,1,exit 1,0,0
+haiku-loc-s1,cva6-194d39face,case-1ae444,Haiku 5.5,claude,loc,sim,0,,,no repro.S,61,781.435,0.64901747,0,exit 1,0,0
+haiku-loc-s1,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,loc,sim,0,fail,fail,,11,109.541,0.022865539999999997,0,exited,0,0
+haiku-loc-s1,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,loc,sim,0,fail,fail,,61,1425.349,0.5472145599999999,0,exit 1,0,0
+haiku-loc-s1,cva6-99a0807757,case-36b209,Haiku 5.5,claude,loc,sim,0,fail,fail,,23,430.28,0.15344328000000002,0,exited,0,0
+haiku-loc-s1,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,loc,sim,0,fail,fail,,37,213.303,0.12023772000000003,0,exited,0,0
+haiku-loc-s1,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,loc,sim,0,fail,fail,,20,159.99,0.024940280000000002,0,exited,0,0
+haiku-loc-s1,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,loc,sim,0,fail,fail,,36,319.106,0.10322526000000001,0,exited,0,0
+haiku-loc-s1,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,loc,sim,0,fail,fail,,33,377.19,0.19738939,0,exited,0,0
+haiku-loc-s1,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,loc,sim,0,pass,pass,,61,984.091,0.64172761,0,exit 1,0,0
+haiku-loc-s1,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,loc,sim,0,fail,fail,,47,320.986,0.25261532000000003,0,exited,0,0
+haiku-loc-s1,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,loc,sim,1,pass,fail,,15,78.59,0.01690453,0,exited,0,0
+haiku-loc-s1,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,loc,sim,1,pass,fail,,61,460.696,0.27608489,0,exit 1,0,0
+haiku-loc-s1,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,loc,sim,1,pass,fail,,21,250.66,0.03737796,0,exited,0,0
+haiku-loc-s2,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,loc,sim,0,,,no repro.S,61,933.503,0.52115617,1,exit 1,0,0
+haiku-loc-s2,cva6-194d39face,case-1ae444,Haiku 5.5,claude,loc,sim,0,timeout,timeout,,23,384.901,0.8905207500000003,0,exited,0,0
+haiku-loc-s2,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,loc,sim,1,pass,fail,,9,85.619,0.01583271,0,exited,0,0
+haiku-loc-s2,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,loc,sim,0,fail,fail,,52,1294.782,0.54869344,2,exited,0,0
+haiku-loc-s2,cva6-99a0807757,case-36b209,Haiku 5.5,claude,loc,sim,0,fail,fail,,37,625.4,0.21198133,0,exited,0,0
+haiku-loc-s2,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,loc,sim,0,fail,fail,,39,218.657,0.11189966000000001,0,exited,0,0
+haiku-loc-s2,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,loc,sim,0,pass,pass,,61,1135.517,0.30500464,1,exit 1,0,0
+haiku-loc-s2,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,loc,sim,0,fail,fail,,28,205.054,0.09398245,0,exited,0,0
+haiku-loc-s2,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,loc,sim,1,pass,fail,,24,361.222,0.16439518999999997,0,exited,0,0
+haiku-loc-s2,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,loc,sim,0,fail,fail,,20,395.324,0.08580572,0,exited,0,0
+haiku-loc-s2,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,loc,sim,0,fail,fail,,20,107.497,0.026538390000000002,0,exited,0,0
+haiku-loc-s2,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,loc,sim,1,pass,fail,,18,96.735,0.021640169999999997,1,exited,0,0
+haiku-loc-s2,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,loc,sim,0,timeout,timeout,,61,395.795,0.35745709,0,exit 1,0,0
+haiku-loc-s2,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,loc,sim,1,pass,fail,,14,174.178,0.0321434,0,exited,0,0
+haiku-loc-s3,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,loc,sim,0,fail,fail,,41,603.388,0.27749055,0,exited,0,0
+haiku-loc-s3,cva6-194d39face,case-1ae444,Haiku 5.5,claude,loc,sim,0,,,no repro.S,61,861.505,0.25475138999999997,1,exit 1,0,0
+haiku-loc-s3,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,loc,sim,1,pass,fail,,15,107.271,0.018930640000000006,1,exited,0,0
+haiku-loc-s3,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,loc,sim,1,pass,fail,,12,115.026,0.020777410000000003,0,exited,0,0
+haiku-loc-s3,cva6-99a0807757,case-36b209,Haiku 5.5,claude,loc,sim,0,fail,fail,,14,174.16,0.03539580999999999,0,exited,0,0
+haiku-loc-s3,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,loc,sim,0,fail,fail,,58,516.105,0.46497879000000003,0,exited,0,0
+haiku-loc-s3,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,loc,sim,0,pass,pass,,61,350.078,0.23672493000000003,0,exit 1,0,0
+haiku-loc-s3,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,loc,sim,0,fail,fail,,37,296.393,0.13115963,1,exited,0,0
+haiku-loc-s3,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,loc,sim,0,fail,fail,,36,731.74,0.37788557000000006,2,exited,0,0
+haiku-loc-s3,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,loc,sim,0,fail,fail,,20,429.791,0.1974705,0,exited,0,0
+haiku-loc-s3,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,loc,sim,0,fail,fail,,20,141.577,0.027064229999999998,0,exited,0,0
+haiku-loc-s3,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,loc,sim,1,pass,fail,,35,619.921,0.055388469999999995,0,exited,0,0
+haiku-loc-s3,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,loc,sim,1,pass,fail,,37,602.296,0.046689700000000015,1,exited,0,0
+haiku-loc-s3,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,loc,sim,1,pass,fail,,41,746.0,0.1269079,0,exited,0,0
+haiku-vague-s1,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,vague,sim,0,fail,fail,,15,85.071,0.01356221,0,exited,0,0
+haiku-vague-s1,cva6-194d39face,case-1ae444,Haiku 5.5,claude,vague,sim,1,pass,fail,,17,72.712,0.018082800000000003,0,exited,0,0
+haiku-vague-s1,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,vague,sim,1,pass,fail,,13,98.571,0.014891009999999998,0,exited,0,0
+haiku-vague-s1,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,vague,sim,0,fail,fail,,14,95.774,0.01914828,0,exited,0,0
+haiku-vague-s1,cva6-99a0807757,case-36b209,Haiku 5.5,claude,vague,sim,0,fail,fail,,16,126.243,0.02601632,0,exited,0,0
+haiku-vague-s1,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,vague,sim,0,fail,fail,,48,1357.943,0.21442221000000003,0,exited,0,0
+haiku-vague-s1,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,vague,sim,1,pass,fail,,12,48.389,0.0090224,0,exited,0,0
+haiku-vague-s1,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,vague,sim,0,fail,fail,,55,816.4,0.11027576,0,exited,0,0
+haiku-vague-s1,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,vague,sim,0,,,no repro.S,61,861.799,0.44640633,1,exit 1,0,0
+haiku-vague-s1,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,vague,sim,0,fail,fail,,36,494.041,0.15805708999999998,1,exited,0,0
+haiku-vague-s1,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,vague,sim,1,pass,fail,,12,59.172,0.01156829,0,exited,0,0
+haiku-vague-s1,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,vague,sim,0,pass,pass,,61,879.236,0.25719413,0,exit 1,0,0
+haiku-vague-s1,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,vague,sim,1,pass,fail,,21,297.323,0.027175879999999996,0,exited,0,0
+haiku-vague-s1,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,vague,sim,0,timeout,fail,,35,248.902,0.04764317999999999,0,exited,0,0
+haiku-vague-s2,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,vague,sim,1,pass,fail,,38,267.434,0.051767549999999996,0,exited,0,0
+haiku-vague-s2,cva6-194d39face,case-1ae444,Haiku 5.5,claude,vague,sim,0,fail,fail,,20,131.462,0.02098539,0,exited,0,0
+haiku-vague-s2,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,vague,sim,0,fail,fail,,13,89.246,0.017019779999999998,0,exited,0,0
+haiku-vague-s2,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,vague,sim,0,pass,pass,,61,882.121,0.45797463,0,exit 1,0,0
+haiku-vague-s2,cva6-99a0807757,case-36b209,Haiku 5.5,claude,vague,sim,0,fail,fail,,19,202.574,0.03912740000000001,0,exited,0,0
+haiku-vague-s2,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,vague,sim,0,fail,fail,,24,385.008,0.02907788,0,exited,0,0
+haiku-vague-s2,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,vague,sim,1,pass,fail,,14,59.226,0.008525669999999999,0,exited,0,0
+haiku-vague-s2,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,vague,sim,0,fail,fail,,15,120.159,0.021246029999999996,0,exited,0,0
+haiku-vague-s2,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,vague,sim,0,pass,pass,,61,658.741,0.4317881,0,exit 1,0,0
+haiku-vague-s2,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,vague,sim,0,fail,fail,,23,209.183,0.03374457000000001,0,exited,0,0
+haiku-vague-s2,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,vague,sim,1,pass,fail,,21,198.164,0.03082464,0,exited,0,0
+haiku-vague-s2,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,vague,sim,1,pass,fail,,35,550.53,0.04923794,0,exited,0,0
+haiku-vague-s2,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,vague,sim,1,pass,fail,,15,137.64,0.01831728,0,exited,0,0
+haiku-vague-s2,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,vague,sim,1,pass,timeout,,28,273.417,0.04104214,0,exited,0,0
+haiku-vague-s3,cva6-0e04a86b13,case-0cc12e,Haiku 5.5,claude,vague,sim,1,pass,fail,,15,78.428,0.015130929999999999,1,exited,0,0
+haiku-vague-s3,cva6-194d39face,case-1ae444,Haiku 5.5,claude,vague,sim,1,pass,fail,,26,145.479,0.026104229999999996,0,exited,0,0
+haiku-vague-s3,cva6-2d2d0c11b7,case-2696e8,Haiku 5.5,claude,vague,sim,0,fail,fail,,14,69.475,0.01588583,0,exited,0,0
+haiku-vague-s3,cva6-6fe7b95910,case-357e26,Haiku 5.5,claude,vague,sim,0,error,error,,61,724.016,0.40338710000000005,1,exit 1,0,0
+haiku-vague-s3,cva6-99a0807757,case-36b209,Haiku 5.5,claude,vague,sim,0,fail,fail,,17,159.549,0.030167230000000003,0,exited,0,0
+haiku-vague-s3,cva6-aef009c4b3,case-47f3d4,Haiku 5.5,claude,vague,sim,0,timeout,timeout,,16,288.097,0.015965180000000002,0,exited,0,0
+haiku-vague-s3,cva6-cc81a7bb49,case-5a937f,Haiku 5.5,claude,vague,sim,1,pass,fail,,11,50.419,0.00898252,0,exited,0,0
+haiku-vague-s3,cva6-81245a47fa,case-77d194,Haiku 5.5,claude,vague,sim,0,fail,fail,,27,337.027,0.035621980000000004,0,exited,0,0
+haiku-vague-s3,cva6-18b9875e9d,case-90c6ff,Haiku 5.5,claude,vague,sim,0,fail,fail,,25,399.895,0.055727280000000004,0,exited,0,0
+haiku-vague-s3,cva6-9a0e01e383,case-a6eafa,Haiku 5.5,claude,vague,sim,0,fail,fail,,16,138.794,0.025295990000000004,0,exited,0,0
+haiku-vague-s3,cva6-fc5fffba6f,case-aa7f1d,Haiku 5.5,claude,vague,sim,1,pass,fail,,19,130.749,0.02660605,0,exited,0,0
+haiku-vague-s3,cva6-2a12275c11,case-b00ddd,Haiku 5.5,claude,vague,sim,1,pass,fail,,39,606.807,0.14977962000000003,0,exited,0,0
+haiku-vague-s3,cva6-d2fdf99a38,case-b1ec9b,Haiku 5.5,claude,vague,sim,1,pass,fail,,11,53.419,0.007424880000000001,1,exited,0,0
+haiku-vague-s3,cva6-49b5fa9e2f,case-cb7e9d,Haiku 5.5,claude,vague,sim,0,fail,fail,,42,417.625,0.13813266000000002,0,exited,0,0
+luna-full-s1,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,full,sim,0,fail,fail,,9,38.309,,2,exited,0,0
+luna-full-s1,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,full,sim,1,pass,fail,,28,180.556,,2,exited,0,0
+luna-full-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,full,sim,1,pass,fail,,28,262.27,,0,exited,0,0
+luna-full-s1,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,full,sim,1,pass,fail,,7,54.59,,4,exited,0,0
+luna-full-s1,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,full,sim,1,pass,fail,,6,55.341,,4,exited,0,0
+luna-full-s1,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,full,sim,1,pass,fail,,8,43.702,,2,exited,0,0
+luna-full-s1,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,full,sim,0,fail,fail,,7,44.148,,0,exited,0,0
+luna-full-s1,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,full,sim,1,pass,fail,,8,58.273,,3,exited,0,0
+luna-full-s1,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,full,sim,1,pass,fail,,16,113.067,,2,exited,0,0
+luna-full-s1,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,full,sim,1,pass,fail,,9,79.366,,0,exited,0,0
+luna-full-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,full,sim,1,pass,fail,,11,47.514,,2,exited,0,0
+luna-full-s1,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,full,sim,1,pass,fail,,10,64.291,,1,exited,0,0
+luna-full-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,full,sim,1,pass,fail,,29,255.698,,2,exited,0,0
+luna-full-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,full,sim,0,timeout,fail,,12,71.367,,1,exited,0,0
+luna-full-s2,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,full,sim,1,pass,fail,,12,48.816,,2,exited,0,0
+luna-full-s2,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,full,sim,1,pass,fail,,9,55.372,,3,exited,0,0
+luna-full-s2,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,full,sim,1,pass,fail,,9,86.208,,0,exited,0,0
+luna-full-s2,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,full,sim,1,pass,fail,,23,191.128,,4,exited,0,0
+luna-full-s2,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,full,sim,1,pass,fail,,9,77.204,,2,exited,0,0
+luna-full-s2,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,full,sim,1,pass,fail,,8,39.333,,4,exited,0,0
+luna-full-s2,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,full,sim,0,fail,fail,,11,52.896,,1,exited,0,0
+luna-full-s2,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,full,sim,1,pass,fail,,21,196.367,,2,exited,0,0
+luna-full-s2,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,full,sim,1,pass,fail,,13,198.246,,2,exited,0,0
+luna-full-s2,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,full,sim,1,pass,fail,,6,61.824,,2,exited,0,0
+luna-full-s2,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,full,sim,1,pass,fail,,7,42.84,,0,exited,0,0
+luna-full-s2,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,full,sim,1,pass,fail,,13,188.475,,2,exited,0,0
+luna-full-s2,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,full,sim,1,pass,fail,,10,80.616,,0,exited,0,0
+luna-full-s2,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,full,sim,0,fail,fail,,13,76.312,,4,exited,0,0
+luna-full-s3,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,full,sim,1,pass,fail,,9,47.116,,0,exited,0,0
+luna-full-s3,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,full,sim,1,pass,fail,,37,447.649,,1,exited,0,0
+luna-full-s3,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,full,sim,0,timeout,fail,,17,151.571,,2,exited,0,0
+luna-full-s3,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,full,sim,0,pass,pass,,24,204.895,,2,exited,0,0
+luna-full-s3,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,full,sim,1,pass,fail,,9,59.961,,0,exited,0,0
+luna-full-s3,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,full,sim,1,pass,fail,,8,47.979,,0,exited,0,0
+luna-full-s3,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,full,sim,1,pass,fail,,6,27.337,,2,exited,0,0
+luna-full-s3,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,full,sim,1,pass,fail,,10,48.941,,3,exited,0,0
+luna-full-s3,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,full,sim,1,pass,fail,,8,56.646,,2,exited,0,0
+luna-full-s3,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,full,sim,0,timeout,fail,,12,92.153,,0,exited,0,0
+luna-full-s3,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,full,sim,1,pass,fail,,10,55.721,,0,exited,0,0
+luna-full-s3,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,full,sim,1,pass,fail,,26,214.769,,3,exited,0,0
+luna-full-s3,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,full,sim,1,pass,fail,,22,239.269,,0,exited,0,0
+luna-full-s3,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,full,sim,0,fail,fail,,9,75.066,,3,exited,0,0
+luna-loc-s1,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,loc,sim,0,fail,fail,,18,196.317,,3,exited,0,0
+luna-loc-s1,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,loc,sim,0,fail,fail,,20,119.476,,3,exited,0,0
+luna-loc-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,loc,sim,1,pass,fail,,21,179.451,,2,exited,0,0
+luna-loc-s1,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,loc,sim,1,pass,fail,,29,216.525,,7,exited,0,0
+luna-loc-s1,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,loc,sim,0,fail,fail,,39,335.809,,4,exited,0,0
+luna-loc-s1,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,loc,sim,0,fail,fail,,26,143.967,,6,exited,0,0
+luna-loc-s1,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,loc,sim,0,timeout,timeout,,18,162.096,,4,exited,0,0
+luna-loc-s1,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,loc,sim,0,fail,fail,,14,75.503,,2,exited,0,0
+luna-loc-s1,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,loc,sim,0,fail,fail,,15,98.57,,5,exited,0,0
+luna-loc-s1,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,loc,sim,0,fail,fail,,39,342.777,,1,exited,0,0
+luna-loc-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,loc,sim,0,fail,fail,,10,66.453,,4,exited,0,0
+luna-loc-s1,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,loc,sim,1,pass,fail,,21,85.975,,4,exited,0,0
+luna-loc-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,loc,sim,0,fail,fail,,25,229.157,,1,exited,0,0
+luna-loc-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,loc,sim,1,pass,fail,,24,209.154,,5,exited,0,0
+luna-loc-s2,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,loc,sim,0,fail,fail,,11,65.108,,2,exited,0,0
+luna-loc-s2,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,loc,sim,0,fail,fail,,48,373.183,,5,exited,0,0
+luna-loc-s2,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,loc,sim,0,fail,fail,,12,93.087,,1,exited,0,0
+luna-loc-s2,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,loc,sim,0,fail,fail,,30,326.894,,6,exited,0,0
+luna-loc-s2,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,loc,sim,0,timeout,timeout,,14,233.586,,2,exited,0,0
+luna-loc-s2,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,loc,sim,0,fail,fail,,27,160.739,,4,exited,0,0
+luna-loc-s2,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,loc,sim,0,timeout,timeout,,72,692.064,,4,exited,0,0
+luna-loc-s2,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,loc,sim,0,fail,fail,,17,114.637,,3,exited,0,0
+luna-loc-s2,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,loc,sim,0,fail,fail,,12,137.459,,5,exited,0,0
+luna-loc-s2,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,loc,sim,0,fail,fail,,31,330.182,,3,exited,0,0
+luna-loc-s2,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,loc,sim,0,fail,fail,,13,64.111,,4,exited,0,0
+luna-loc-s2,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,loc,sim,0,fail,fail,,10,57.386,,6,exited,0,0
+luna-loc-s2,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,loc,sim,0,fail,fail,,42,320.12,,3,exited,0,0
+luna-loc-s2,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,loc,sim,0,fail,fail,,14,88.529,,4,exited,0,0
+luna-loc-s3,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,loc,sim,0,fail,fail,,27,265.94,,6,exited,0,0
+luna-loc-s3,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,loc,sim,0,timeout,timeout,,19,221.873,,4,exited,0,0
+luna-loc-s3,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,loc,sim,0,fail,fail,,34,278.816,,1,exited,0,0
+luna-loc-s3,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,loc,sim,0,fail,fail,,17,170.309,,7,exited,0,0
+luna-loc-s3,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,loc,sim,0,fail,fail,,11,66.166,,3,exited,0,0
+luna-loc-s3,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,loc,sim,0,fail,fail,,25,172.318,,5,exited,0,0
+luna-loc-s3,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,loc,sim,0,fail,fail,,31,301.898,,2,exited,0,0
+luna-loc-s3,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,loc,sim,0,fail,fail,,14,95.47,,2,exited,0,0
+luna-loc-s3,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,loc,sim,0,fail,fail,,39,288.543,,2,exited,0,0
+luna-loc-s3,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,loc,sim,0,fail,fail,,15,105.903,,1,exited,0,0
+luna-loc-s3,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,loc,sim,0,fail,fail,,12,69.818,,3,exited,0,0
+luna-loc-s3,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,loc,sim,0,fail,fail,,55,596.581,,3,exited,0,0
+luna-loc-s3,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,loc,sim,0,fail,fail,,41,366.992,,3,exited,0,0
+luna-loc-s3,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,loc,sim,0,timeout,fail,,13,129.917,,2,exited,0,0
+luna-vague-s1,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,vague,sim,1,pass,fail,,8,75.796,,3,exited,0,0
+luna-vague-s1,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,vague,sim,1,pass,fail,,8,39.156,,4,exited,0,0
+luna-vague-s1,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,vague,sim,0,fail,fail,,17,61.804,,2,exited,0,0
+luna-vague-s1,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,vague,sim,0,timeout,fail,,12,72.503,,5,exited,0,0
+luna-vague-s1,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,vague,sim,0,fail,fail,,17,109.098,,2,exited,0,0
+luna-vague-s1,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,vague,sim,0,fail,fail,,10,66.943,,3,exited,0,0
+luna-vague-s1,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,vague,sim,0,fail,fail,,14,85.802,,2,exited,0,0
+luna-vague-s1,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,vague,sim,0,fail,fail,,47,399.907,,3,exited,0,0
+luna-vague-s1,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,vague,sim,0,fail,fail,,13,119.866,,2,exited,0,0
+luna-vague-s1,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,vague,sim,0,pass,pass,,12,91.413,,1,exited,0,0
+luna-vague-s1,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,vague,sim,1,pass,fail,,16,204.692,,1,exited,0,0
+luna-vague-s1,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,vague,sim,1,pass,fail,,19,138.998,,5,exited,0,0
+luna-vague-s1,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,vague,sim,1,pass,fail,,23,190.369,,3,exited,0,0
+luna-vague-s1,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,vague,sim,0,timeout,timeout,,16,169.062,,1,exited,0,0
+luna-vague-s2,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,vague,sim,0,timeout,timeout,,42,318.634,,4,exited,0,0
+luna-vague-s2,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,vague,sim,1,pass,fail,,25,247.692,,2,exited,0,0
+luna-vague-s2,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,vague,sim,0,fail,fail,,13,97.415,,0,exited,0,0
+luna-vague-s2,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,vague,sim,0,pass,pass,,30,299.896,,25,exited,0,0
+luna-vague-s2,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,vague,sim,0,fail,fail,,16,154.893,,2,exited,0,0
+luna-vague-s2,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,vague,sim,0,fail,fail,,14,82.965,,2,exited,0,0
+luna-vague-s2,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,vague,sim,1,pass,fail,,8,45.484,,1,exited,0,0
+luna-vague-s2,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,vague,sim,0,fail,fail,,27,166.758,,0,exited,0,0
+luna-vague-s2,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,vague,sim,0,fail,fail,,18,98.147,,2,exited,0,0
+luna-vague-s2,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,vague,sim,0,timeout,timeout,,11,127.474,,3,exited,0,0
+luna-vague-s2,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,vague,sim,1,pass,fail,,8,43.532,,2,exited,0,0
+luna-vague-s2,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,vague,sim,0,fail,fail,,26,184.396,,2,exited,0,0
+luna-vague-s2,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,vague,sim,1,pass,fail,,18,104.247,,2,exited,0,0
+luna-vague-s2,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,vague,sim,0,fail,fail,,24,159.238,,3,exited,0,0
+luna-vague-s3,cva6-0e04a86b13,case-0cc12e,GPT-6 Luna,codex,vague,sim,0,fail,fail,,25,188.775,,4,exited,0,0
+luna-vague-s3,cva6-194d39face,case-1ae444,GPT-6 Luna,codex,vague,sim,1,pass,fail,,34,168.736,,1,exited,0,0
+luna-vague-s3,cva6-2d2d0c11b7,case-2696e8,GPT-6 Luna,codex,vague,sim,1,pass,fail,,9,66.833,,3,exited,0,0
+luna-vague-s3,cva6-6fe7b95910,case-357e26,GPT-6 Luna,codex,vague,sim,1,pass,timeout,,16,232.753,,2,exited,0,0
+luna-vague-s3,cva6-99a0807757,case-36b209,GPT-6 Luna,codex,vague,sim,0,fail,fail,,44,401.741,,4,exited,0,0
+luna-vague-s3,cva6-aef009c4b3,case-47f3d4,GPT-6 Luna,codex,vague,sim,1,pass,fail,,9,61.408,,10,exited,0,0
+luna-vague-s3,cva6-cc81a7bb49,case-5a937f,GPT-6 Luna,codex,vague,sim,1,pass,fail,,12,62.647,,3,exited,0,0
+luna-vague-s3,cva6-81245a47fa,case-77d194,GPT-6 Luna,codex,vague,sim,0,fail,fail,,13,109.991,,1,exited,0,0
+luna-vague-s3,cva6-18b9875e9d,case-90c6ff,GPT-6 Luna,codex,vague,sim,0,fail,fail,,12,142.87,,3,exited,0,0
+luna-vague-s3,cva6-9a0e01e383,case-a6eafa,GPT-6 Luna,codex,vague,sim,0,fail,fail,,47,408.727,,4,exited,0,0
+luna-vague-s3,cva6-fc5fffba6f,case-aa7f1d,GPT-6 Luna,codex,vague,sim,0,timeout,timeout,,11,142.999,,0,exited,0,0
+luna-vague-s3,cva6-2a12275c11,case-b00ddd,GPT-6 Luna,codex,vague,sim,0,fail,fail,,11,88.221,,0,exited,0,0
+luna-vague-s3,cva6-d2fdf99a38,case-b1ec9b,GPT-6 Luna,codex,vague,sim,1,pass,fail,,8,67.544,,2,exited,0,0
+luna-vague-s3,cva6-49b5fa9e2f,case-cb7e9d,GPT-6 Luna,codex,vague,sim,1,pass,fail,,34,280.017,,3,exited,0,0
+nemotron-full-s1,cva6-194d39face,case-1ae444,nemotron-3-super,nemotron,full,sim,0,timeout,timeout,,61,917.087,10.815512,0,exit 1,0,1
+nemotron-full-s1,cva6-2d2d0c11b7,case-2696e8,nemotron-3-super,nemotron,full,sim,0,timeout,timeout,,61,710.677,10.315567999999999,0,exit 1,0,1
+nemotron-full-s1,cva6-81245a47fa,case-77d194,nemotron-3-super,nemotron,full,sim,0,error,error,,61,452.186,15.725864,0,exit 1,0,1
+nemotron-full-s1,cva6-18b9875e9d,case-90c6ff,nemotron-3-super,nemotron,full,sim,0,fail,fail,,25,483.231,4.187648,0,exited,0,1
+nemotron-full-s1,cva6-2a12275c11,case-b00ddd,nemotron-3-super,nemotron,full,sim,0,fail,fail,,61,578.518,8.375176,0,exit 1,0,1
+nemotron-full-s1,cva6-49b5fa9e2f,case-cb7e9d,nemotron-3-super,nemotron,full,sim,0,fail,fail,,61,602.094,8.955724000000002,1,exit 1,0,1
 opus-full-s2,cva6-0e04a86b13,case-0cc12e,Opus 5.5,claude,full,nosim,1,pass,fail,,9,53.927,0.23185499999999998,0,exited,0,0
 opus-full-s2,cva6-0e04a86b13,case-0cc12e,Opus 5.5,claude,full,sim,1,pass,fail,,12,81.805,0.31105700000000003,0,exited,0,0
 opus-full-s2,cva6-194d39face,case-1ae444,Opus 5.5,claude,full,nosim,1,pass,fail,,13,74.223,0.42564860000000004,0,exited,0,0

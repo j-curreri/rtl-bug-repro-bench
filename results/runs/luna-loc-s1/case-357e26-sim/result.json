@@ -1,0 +1,43 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "luna-loc-s1",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 29,
+  "cost_usd": null,
+  "duration_s": 216.525,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "n hardware license in the context of the PULP platform\\n// (http://www.pulp-platform.org), under the copyright of ETH Zurich an",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "sh -lc \\\"rg --files | rg 'pmp_entry\\\\\\\\.sv\\\"'$|repro'\\\"' && git status --short && rg -n 'trail_ones|conf_addr_n' core/pmp\\\"",
+    "/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\"",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab"
+  ],
+  "usage": {
+    "input_tokens": 732006,
+    "cached_input_tokens": 688896,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 15567,
+    "reasoning_output_tokens": 11997
+  },
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s1/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

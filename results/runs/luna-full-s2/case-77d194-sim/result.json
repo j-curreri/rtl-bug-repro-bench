@@ -1,0 +1,38 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "luna-full-s2",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 21,
+  "cost_usd": null,
+  "duration_s": 196.367,
+  "leak_hits": [
+    "on\", \"command\": \"/bin/bash -lc \\\"sed -n '1,100p' repro.S && git status --short\\\"\", \"aggregated_output\": \"#include \\\"test.h\\",
+    "n  .align 2\\ntrap_handler:\\n  FAIL(127)\\n/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 566049,
+    "cached_input_tokens": 534272,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 12680,
+    "reasoning_output_tokens": 10406
+  },
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s2/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

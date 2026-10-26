@@ -1,0 +1,39 @@
+{
+  "case": "cva6-fc5fffba6f",
+  "anon_id": "case-aa7f1d",
+  "condition": "sim",
+  "run_id": "gemini-argon-full-s1",
+  "backend": "gemini",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gemini-4-argon-high",
+  "effort": "high",
+  "num_turns": 41,
+  "cost_usd": null,
+  "leak_hits": [
+    "{\"CommandLine\": \"ls -la /work /work/harness /work/sim && git -C /work status 2>&1 || true\"}"
+  ],
+  "usage": {
+    "input_tokens": 144816,
+    "output_tokens": 24156,
+    "thinking_tokens": 20630,
+    "cache_read_tokens": 1689839,
+    "total_tokens": 168972
+  },
+  "web_denied": 0,
+  "agy_status": "SUCCESS",
+  "duration_s": 400.713,
+  "grade": {
+    "case": "cva6-fc5fffba6f",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-argon-full-s1/case-aa7f1d-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "luna-full-s3",
+  "backend": "codex",
+  "tier": "full",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 10,
+  "cost_usd": null,
+  "duration_s": 48.941,
+  "leak_hits": [
+    "1\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc 'git status --short && git diff -- repro.S && nl -ba repro.S'\", ",
+    "xecution\", \"command\": \"/bin/bash -lc 'git status --short && git diff -- repro.S && nl -ba repro.S'\", \"aggregated_output\": \"",
+    " nl -ba repro.S'\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 234565,
+    "cached_input_tokens": 218112,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3006,
+    "reasoning_output_tokens": 1640
+  },
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-full-s3/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 1
+    },
+    "valid": true
+  }
+}

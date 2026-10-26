@@ -1,0 +1,37 @@
+{
+  "case": "cva6-9a0e01e383",
+  "anon_id": "case-a6eafa",
+  "condition": "sim",
+  "run_id": "luna-vague-s1",
+  "backend": "codex",
+  "tier": "vague",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 12,
+  "cost_usd": null,
+  "duration_s": 91.413,
+  "leak_hits": [
+    "command_execution\", \"command\": \"/bin/bash -lc 'cat repro.S; git status --short 2>/dev/null || true'\", \"aggregated_output\": "
+  ],
+  "usage": {
+    "input_tokens": 406686,
+    "cached_input_tokens": 354048,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3727,
+    "reasoning_output_tokens": 2192
+  },
+  "grade": {
+    "case": "cva6-9a0e01e383",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-vague-s1/case-a6eafa-sim/repro.elf",
+    "fixed": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "buggy": {
+      "outcome": "pass",
+      "tohost": 0
+    },
+    "valid": false
+  }
+}

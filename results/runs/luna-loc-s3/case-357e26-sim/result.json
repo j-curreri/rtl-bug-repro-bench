@@ -1,0 +1,43 @@
+{
+  "case": "cva6-6fe7b95910",
+  "anon_id": "case-357e26",
+  "condition": "sim",
+  "run_id": "luna-loc-s3",
+  "backend": "codex",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "num_turns": 17,
+  "cost_usd": null,
+  "duration_s": 170.309,
+  "leak_hits": [
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "n hardware license in the context of the PULP platform\\n// (http://www.pulp-platform.org), under the copyright of ETH Zurich an",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "h the License.  You may obtain a copy of the License at\\n// http://solderpad.org/licenses/SHL-0.51. Unless required by applicab",
+    "\", \"type\": \"command_execution\", \"command\": \"/bin/bash -lc \\\"git status --short && git log -5 --oneline -- core/pmp/src/pmp_",
+    "ecution\", \"command\": \"/bin/bash -lc \\\"git status --short && git log -5 --oneline -- core/pmp/src/pmp_entry.sv && sed -n '1,",
+    "/run.sh --help\\\"\", \"aggregated_output\": \"/bin/bash: line 1: git: command not found\\n\", \"exit_code\": 127, \"status\": \"failed\""
+  ],
+  "usage": {
+    "input_tokens": 594238,
+    "cached_input_tokens": 557568,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 12125,
+    "reasoning_output_tokens": 9919
+  },
+  "grade": {
+    "case": "cva6-6fe7b95910",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/luna-loc-s3/case-357e26-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

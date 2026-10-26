@@ -1,0 +1,44 @@
+{
+  "case": "cva6-81245a47fa",
+  "anon_id": "case-77d194",
+  "condition": "sim",
+  "run_id": "gemini-flash-loc-s1",
+  "backend": "gemini",
+  "tier": "loc",
+  "agent_status": "exited",
+  "model": "gemini-3.8-flash-high",
+  "effort": "high",
+  "agy_account": "agy-home",
+  "num_turns": 112,
+  "cost_usd": null,
+  "leak_hits": [
+    "{\"CommandLine\": \"git status; git log -n 5\"}",
+    "{\"CommandLine\": \"git status; git log -n 5\"}",
+    "{\"CommandLine\": \"find /work -name \\\".git\\\"\"}",
+    "{\"CommandLine\": \"find / -name \\\".git\\\" 2>/dev/null\"}",
+    "{\"CommandLine\": \"find / -name \\\"git\\\" 2>/dev/null || true\"}"
+  ],
+  "usage": {
+    "input_tokens": 840451,
+    "output_tokens": 62616,
+    "thinking_tokens": 53833,
+    "cache_read_tokens": 8697910,
+    "total_tokens": 903067
+  },
+  "web_denied": 0,
+  "agy_status": "SUCCESS",
+  "duration_s": 840.97,
+  "grade": {
+    "case": "cva6-81245a47fa",
+    "elf": "/mnt/k3/rtl-bug-repro-bench/eval/runs/gemini-flash-loc-s1/case-77d194-sim/repro.elf",
+    "fixed": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "buggy": {
+      "outcome": "fail",
+      "tohost": 2
+    },
+    "valid": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "case": "cva6-0e04a86b13",
+  "anon_id": "case-0cc12e",
+  "condition": "sim",
+  "run_id": "haiku-loc-s1",
+  "backend": "claude",
+  "tier": "loc",
+  "agent_status": "exit 1",
+  "model": "claude-haiku-5-5",
+  "num_turns": 61,
+  "cost_usd": 0.24762452,
+  "duration_s": 685.651,
+  "leak_hits": [
+    "\"command\": \"cd /work/core; wc -l branch_unit.sv decoder.sv; git -C /work status 2>&1 | head -2; ls\", \"description\": \"Check "
+  ],
+  "grade": {
+    "valid": false,
+    "error": "no repro.S"
+  }
+}
